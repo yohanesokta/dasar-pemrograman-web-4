@@ -17,5 +17,5 @@ implementasi colaborasi gituhub untuk project web di matakulihah **DASAR PEMROGR
 -   setiap user menggunakan branch dengan nama mereka
 -   review bisa dilakukan siapa aja
 -   commit dengan perubahan dan pesan yang jelas
--   setujui conflig file dan penetapan perubahan yang ada dengan jelas
+-   setujui conflict file dan penetapan perubahan yang ada dengan jelas
 
