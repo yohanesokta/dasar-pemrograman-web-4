@@ -293,5 +293,37 @@ body {
   text-align: center;
   font-weight: 700;
 }
+.container-content .content .center-headers {
+  color: white;
+  text-align: center;
+}
+.container-content .content .video-player {
+  margin: 10px auto;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.043);
+  width: 100%;
+  aspect-ratio: 16/9;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.297);
+}
+.container-content .content .video-player iframe {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  margin-top: 200px;
+  background-color: #141414;
+  color: #999;
+  padding: 20px 20px;
+  font-size: 14px;
+}
+footer h3 {
+  font-weight: 400;
+  text-align: center;
+}
+footer h3 span {
+  color: white;
+}
 
 /*# sourceMappingURL=dashboard.css.map */
