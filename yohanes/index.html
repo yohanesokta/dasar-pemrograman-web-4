@@ -3,120 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./styles/compile/dashboard.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <style>
-        @font-face{
-            font-family: "Minecraft";
-            src: url('./assets/Minecraft/3_Minecraft-Bold.otf');
-        }
-        *{
-            font-family: "Outfit",Arial, Helvetica, sans-serif;
-            scroll-behavior: smooth;
-        }
-        .search:focus-within{
-            outline: 2px solid white;
-        }
-        button:hover{
-            cursor: pointer;
-            transition: 0.3s ease;
-            opacity: .7;
-        }
-        .video{
-            box-shadow: 0 0 1px white;
-            transition: .3s ease;
-        }
-        .video:hover{
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.469);
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
 </head>
-<body style="padding: 0; margin: 0; background-color: black;">
-    <nav style="width: 100%; height: 5rem; position: fixed; z-index: 10; display: flex; justify-content: space-between; backdrop-filter: blur(10px);">
-        <div style="display: flex;">
-            <ul style="display: flex; font-size: 18pt; gap:40px; list-style: none; ">
-                <li style="color: white; cursor: pointer;">Home</li>
-                <li style="color: rgba(255, 255, 255, 0.8); cursor: pointer;">Show</li>
-                <li style="color: rgba(255, 255, 255, 0.8); cursor: pointer;">Movie</li>
-                <li style="color: rgba(255, 255, 255, 0.8); cursor: pointer;">Trailer</li>
-                <li style="color: rgba(255, 255, 255, 0.8); cursor: pointer;">FAQ</li>
-
-            </ul>
-        </div>
-        <div style="display: flex; gap: 20px; align-items: center; margin-right: 40px;">
-            <div class="search" style="background-color: rgba(255, 255, 255, 0.291); padding: 0 20px; border-radius: 10px; color: white;">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" style="font-size: 14pt; font-weight: bold; color: rgb(255, 255, 255); padding: 12px 14px; border: none; outline: none; background-color: transparent;" placeholder="Search">
+<body>
+    <!--  -->
+    <div class="only-background" id="bg"></div>
+    <!--  -->
+    <div class="container-sidebar">
+        <section class="sidebar"> 
+            <div class="sidebar-btn-container">
+                <button class="logo">A</button>
+                <button class="active"><i class="fa-solid fa-house-fire"></i></button>
+                <button><i class="fa-solid fa-circle-down"></i></button>
+                <button><i class="fa-solid fa-fire"></i></button>
+                <button><i class="fa-solid fa-list"></i></button>
+                <button><i class="fa-solid fa-folder"></i></button>
             </div>
-            <button style="padding: 11px 40px; font-size: 14pt; background-color: rgba(255, 255, 255, 0.281); color: white; outline: none; border: none; border-radius: 10px;">Login</button>
-            <button style="padding: 11px 40px; font-size: 14pt; background-color: rgba(255, 255, 255, 0.281); color: white; outline: none; border: none; border-radius: 10px;">Sign</button>
-        </div>
-    </nav>
-    <div style="top:0;position: absolute; width: 100%; height: 1100px; background-image: url('./assets/mc2.png'); background-size:cover; background-repeat: no-repeat;">
-        <div style="color: white; margin-top: 200px; padding-left: 40px; font-size: 24pt;">
-            <p ><span style="font-weight: bold; font-size: 32pt;">nonton</span><span style="margin-left: 10px; color: rgba(255, 255, 255, 0.668);">.aja</span></p>
-            <h1 style="padding: 0; margin: 0; margin-top: -30px; font-size: 64pt; font-family: 'Minecraft'; font-weight: bold;">MINECRAFT MOVIE</h1>
-            <div style="margin-left: 10px; padding: 20px 0; font-weight: bold; display: flex; align-items: center; font-size: 18pt; display: flex; gap: 40px;">
-                <span>2025</span>
-                <span>Full Movie</span>
-                <button style="color: white; background-color: transparent; border: 1px solid white; padding: 10px 20px; border-radius: 20px;">MOJANG-STUDIOS</button>
-            </div>
-            <p style="max-width: 800px; font-size: 16pt;">Minecraft Movie adalah sebuah film komedi, petualangan, dan fantasi dari Amerika yang dirilis pada tahun 2025 yang didasarkan oleh sebuah video game dari tahun 2011 bernama Minecraft, oleh Mojang Studios</p>
-            <div style="display: flex; gap: 20px;">
-                <button style="background-color: rgb(69, 16, 119); color: white; font-size: 20pt; padding: 10px 30px; border-radius: 40px; border: 2px solid rgb(117, 40, 189); display: flex; gap: 10px; align-items: center;"><i class="fa-solid fa-circle-play"></i> Play</button>
-                <button style="background-color: rgba(0, 0, 0, 0.508); color: white; font-size: 16pt; padding: 10px 30px; border-radius: 40px; border: 2px solid rgb(90, 90, 90); display: flex; gap: 10px; align-items: center;"><i class="fa-solid fa-circle-info"></i> More info</button>
-            </div>
-        </div>
-
-        <div style="color: white; padding: 20px 40px; margin-top: 50px;">
-            <p style="font-size: 18pt; font-weight: 500;">Popular This Time!</p>
-
-
-            <div style="display: flex; gap: 40px; flex-wrap: wrap; width: 100%;">
-
-                <div class="video" style="width: 450px; height: 220px; border-radius: 14px; overflow: hidden; position: relative; cursor: pointer;">
-    
-                    <img  src="./assets/minecraft.jpg" alt="image" style="width: 100%; top: 0; height: 100%; object-fit: cover; opacity: .7; pointer-events: none;">
-                    <p style="text-align: center; margin-top: 160px; font-weight: bold; position: absolute; font-size: 18pt; top: 0; width: 100%; pointer-events: none;">Minecraft The Movie</p>  
-                   
+        </section>
+    </div>
+    <div class="container-content">
+        <div class="container-navigation">
+            <nav>
+                <div class="menu">
+                    <a class="active" href="">Home</a>
+                    <a href="">Home</a>
+                    <a href="">Home</a>
+                    <a href="">Home</a>
                 </div>
-
-                <div class="video" style="width: 450px; height: 220px; border-radius: 14px; overflow: hidden; position: relative; cursor: pointer;">
-
-                    <img  src="./assets/sekawan-limu.jpg" alt="image" style="width: 100%; top: 0; height: 100%; object-fit: cover; opacity: .7; pointer-events: none;">
-                    <p style="text-align: center; margin-top: 160px; font-weight: bold; position: absolute; font-size: 18pt; top: 0; width: 100%; pointer-events: none;">Sekawan Limo</p>  
-                   
+                
+                <div class="auth">
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="search">
+                    </div>
+                    <button>Masuk</button>
                 </div>
-
-
-                <div class="video" style="width: 450px; height: 220px; border-radius: 14px; overflow: hidden; position: relative; cursor: pointer;">
-
-                    <img  src="./assets/kkn.jpg" alt="image" style="width: 100%; top: 0; height: 100%; object-fit: cover; opacity: .7; pointer-events: none;">
-                    <p style="text-align: center; margin-top: 160px; font-weight: bold; position: absolute; font-size: 18pt; top: 0; width: 100%; pointer-events: none;">KKN Di Desa PENARI</p>  
-                   
-                </div>
-
-
-
-                <div class="video" style="width: 450px; height: 220px; border-radius: 14px; overflow: hidden; position: relative; cursor: pointer;">
-
-                    <img  src="./assets/bidah.jpeg" alt="image" style="width: 100%; top: 0; height: 100%; object-fit: cover; opacity: .7; pointer-events: none;">
-                    <p style="text-align: center; margin-top: 160px; font-weight: bold; position: absolute; font-size: 18pt; top: 0; width: 100%; pointer-events: none;">BIDAAH</p>  
-                   
-                </div>
-            
-            </div>
+            </nav>
         </div>
 
+        <div class="content">
+           <div class="tagline">
+                <div class="brand">
+                    <p>nonton <span>.aja</span></p>
+                </div>
+                <h1>MINECRAFT <span>MOVIE</span></h1>
+
+                <div class="tag">
+                    <span>2025</span>
+                    <span>Full Movie</span>
+                    <button>Mojang Studios</button>
+                </div>
+                <p><span>Minecraft</span> Movie adalah sebuah film komedi, petualangan, dan fantasi dari Amerika yang dirilis pada tahun 2025 yang didasarkan oleh sebuah video game dari tahun 2011 bernama Minecraft, oleh <span>Mojang Studios</span></p>
+
+                <div class="btn">
+                    <button class="play"><i class="fa-solid fa-circle-play"></i> Play</button>
+                    <button><i class="fa-solid fa-circle-info"></i> More info</button>
+                </div>
+           </div>
 
 
-            
+           <h2 class="headers">Populer Bulan Ini</h2>
+           <div class="container-video">
+                <div class="video">
+                    <span class="">Hot <i class="fa-solid fa-fire"></i></span>
+                    <p>Minecraft Movie</p>
+                    <img src="./assets/minecraft.jpg" alt="">
+                </div>
+                <div class="video">
+                    <span class="">TOP 10</span>
+                    <img src="./assets/sekawan-limo.webp" alt="">
+                </div>
+                <div class="video">
+                    <span class="">TOP 10</span>
+                    <img src="./assets/bidah.jpeg" alt="">
+                </div>
+                <div class="video">
+                    <span class="">Hot <i class="fa-solid fa-fire"></i></span>
+                    <p>KKN DESA PENARI</p>
+                    <img src="./assets/kkn.jpg" alt="">
+                </div>
+                <div class="video">
+                    <span class="">Hot <i class="fa-solid fa-fire"></i></span>
+                    <img src="./assets/pinjam dulu 100.jpeg" alt="">
+                </div>
+                <div class="video">
+                    <span class="">Hot <i class="fa-solid fa-fire"></i></span>
+                    <img src="./assets/pabrikgula.jpg" alt="">
+                </div>
+           </div>
+
+           <h2 class="headers">Sesuai Selera</h2>
+           <div class="container-video">
+                <div class="potrait-video">
+                    <span class="">Hot <i class="fa-solid fa-fire"></i></span>
+                    <img src="./assets/p-pengepungan.jpeg" alt="">
+                </div>
+                <div class="potrait-video">
+                    <img src="./assets/p-mendadakdangdut.jpeg" alt="">
+                </div>  
+           </div>
+
         </div>
+
     </div>
 
-    
+    <script src="./scripts/dashboard.js" lang="Javascript"></script>
 </body>
 </html>
