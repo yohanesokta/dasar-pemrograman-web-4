@@ -1,0 +1,337 @@
+body{
+    background-color: #000000;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit",Arial, sans-serif;
+    display: flex;
+    scroll-behavior: smooth;
+}
+
+.only-background{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../assets/mc2.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+@font-face{
+    font-family: "Minecraft";
+    src: url('../../assets/Minecraft/3_Minecraft-Bold.otf') format('truetype');
+}
+.container-sidebar{
+    z-index: 10;
+    width: 80px;
+    height: 100%;
+    .sidebar{
+        position: fixed;
+        backdrop-filter: blur(20px);
+        background-color: rgba(255, 255, 255, 0.06);
+        display: flex;
+        width: 80px;
+        height: 100vh;
+        flex-direction: column;
+        .sidebar-btn-container{
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            .logo{
+                border-radius: 20px;
+                border: none;
+                outline: none;
+                background-color: white;
+                color: rgb(64, 12, 113);
+                font-size: 14pt;
+                margin-bottom: 40px;
+            }
+            .active {
+                background-color: rgba(0, 145, 255, 0.437);
+            }
+            button{
+                cursor: pointer;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                font-weight: bold;
+                outline: none;
+                border: none;
+                color: white;
+                font-size: 14pt;
+                background-color: transparent;
+            }
+            button:hover{
+                transition: .3s ease;
+                background-color: rgba(237, 237, 237, 0.337);
+            }
+        }
+    }
+}
+.container-content{
+    z-index: 9;
+    flex: 1;
+    .container-navigation{
+        width: 100%;
+        position: relative;
+        height: 80px;
+        nav{
+            z-index: 11;
+            padding: 0 20px;
+            position: fixed;
+            display: flex;
+            width: calc(100% - 120px);
+            height: 80px;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.171);
+            backdrop-filter: blur(10px);
+            .menu{
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                a{
+                    text-decoration: none;
+                    color: rgba(255, 255, 255, 0.5);
+                    font-size: 14pt;
+                }
+                .active{
+                    color: white;
+                    font-weight: bold;
+                }
+                a:hover{
+                    transition: .3s ease;
+                    color: white;
+                }
+            }
+            .auth{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                .search{
+                    display: flex;
+                    color: rgb(255, 255, 255);
+                    align-items: center;
+                    gap: 10px;
+                    background-color: rgba(255, 255, 255, 0.044);
+                    border-radius: 8px;
+                    padding-left: 15px;
+                    border: 2px solid rgba(224, 224, 224, 0.35);
+                    input{
+                        color: rgb(255, 255, 255);
+                        background-color: transparent;
+                        outline: none;
+                        font-size: 12pt;
+                        border: none;
+                        padding: 11px 0;
+                    }
+                }
+                button{
+                    cursor: pointer;
+                    border-radius: 8px;
+                    border: 2px solid rgba(224, 224, 224, 0.35);
+                    outline: none;
+                    background-color: rgba(255, 255, 255, 0.044);
+                    color: rgb(255, 255, 255);
+                    font-size: 12pt;
+                    padding: 10px 30px;
+                }
+            }
+        }
+
+        
+    }
+    .content{
+        padding: 0 40px;
+        .tagline{
+            margin-top: 100px;
+            .brand{
+                p{
+                    padding: 0;
+                    margin: 0;
+                    color: rgb(179, 109, 255);
+                    font-size: 28pt;
+                    font-weight: 500;
+                    span{
+                        color: rgb(118, 118, 118);
+                        font-size: 22pt;
+    
+                    }
+                }
+            }
+            p{
+                font-size: 14pt;
+                font-weight: 500;
+                max-width: 700px;
+                color: white;
+                span{
+                    color: rgb(179, 109, 255);
+                }
+            }
+            h1{
+                padding: 0;
+                margin: 0;
+                font-family: 'Minecraft';
+                font-weight: bold;
+                color: white;
+                font-size: 52pt;
+                span{
+                    color: rgb(255, 135, 135);
+                }
+            }
+            .tag{
+                padding: 20px 0;
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                span{
+                    color: white;
+                    font-weight: bold;
+                    font-size: 14pt;
+                }
+                button{
+                    padding: 8px 20px; 
+                    border: 1px solid white;
+                    color: white;
+                    background: transparent;
+                    font-size: 12pt;
+                    font-weight: bold;
+                    border-radius: 40px;
+                }
+            }
+            .btn{
+                padding: 10px 0;
+                display: flex;
+                gap: 20px;
+                button{
+                    cursor: pointer;
+                    padding: 10px 30px;
+                    border-radius: 40px;
+                    font-size: 13pt;
+                    font-weight: 500;
+                    color: white;
+                }
+                .play{
+                    background-color: rgb(37, 24, 134);
+                    border:2px solid rgb(61, 50, 149);
+                    outline: 5px solid rgba(62, 50, 149, 0.426);
+                }
+                .play:hover{
+                    transition: .3s ease;
+                    outline: 10px solid rgba(101, 89, 193, 0.357);
+
+                }
+                button:last-child{
+                    border: 1px solid white;
+                    background-color: #00000055;
+                }
+            }
+        }
+
+        .headers{
+            color: white;
+            padding-top: 40px;
+        }
+        .container-video{
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            .video{
+                position: relative;
+                border-radius: 10px;
+                width: 400px;
+                height: 200px;
+                overflow: hidden;
+                span{
+                    right: 0;
+                    background-color: red;
+                    padding: 5px 10px;
+                    font-weight: bold;
+                    border-radius: 0 0 0 8px;
+                    position: absolute;
+                    z-index: 6;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                p{
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    font-size: 18pt;
+                    text-align: center;
+                    font-weight: 700;
+                }
+            }
+            .potrait-video{
+                position: relative;
+                border-radius: 10px;
+                width: 300px;
+                height: 400px;
+                overflow: hidden;
+                span{
+                    right: 0;
+                    background-color: red;
+                    padding: 5px 10px;
+                    font-weight: bold;
+                    border-radius: 0 0 0 8px;
+                    position: absolute;
+                    z-index: 6;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                p{
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    font-size: 18pt;
+                    text-align: center;
+                    font-weight: 700;
+                }
+            }
+        }
+        .center-headers{
+            color: white;
+            text-align: center;
+        }
+        .video-player{
+            margin: 10px auto;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.043);
+            width: 100%;
+            aspect-ratio: 16/9;
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.297);
+            iframe{
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+// Footer
+
+footer {
+    margin-top: 200px;
+    background-color: #141414;
+    color: #999;
+    padding: 20px 20px;
+    font-size: 14px;
+    h3{
+        font-weight: 400;
+        text-align: center;
+        span{
+            color: white;
+        }
+    }
+  }
