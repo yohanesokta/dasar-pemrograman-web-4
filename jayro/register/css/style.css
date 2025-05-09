@@ -23,7 +23,7 @@ body{
 }
 #password:focus{
     border: 2px var(--ring) solid;
-    outline: none;
+    outline: none;  
 }
 #username:focus{
     border: 2px var(--ring) solid;
@@ -36,9 +36,10 @@ body{
     color: var(--primary-foreground);
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 98%;
+    width: 96%;
     height: 30px;
     border-radius: 5px;
+    padding-left: 10px;
     background-color: var(--popover-foreground);
     border: 1px var(--muted-foreground) solid;
 }
