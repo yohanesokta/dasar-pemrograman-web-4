@@ -1,6 +1,5 @@
 .button, .button_outline, .button_ghost {
   padding: 8px 12px;
-  color: var(--foreground);
   font-size: 14px;
   font-weight: 500;
   display: flex;
@@ -9,18 +8,25 @@
   border-radius: var(--radius);
 }
 
-.button_ghost:hover, .button_outline:hover {
+.button_ghost:hover, .button_ghost:hover i {
+  color: var(--secondary-foreground);
   background-color: var(--primary);
 }
 
+
+.button_outline:hover {
+  background-color: var(--secondary);
+}
+
 .button_ghost, .button_outline {
+  color: var(--secondary-foreground);
   background-color: transparent;
 }
 
 .button {
-  background-color: var(--primary);
+  background-color: var(--secondary);
 }
 
 .button_outline {
-  border: 1px var(--primary) solid;
+  border: 1px var(--border) solid;
 }
