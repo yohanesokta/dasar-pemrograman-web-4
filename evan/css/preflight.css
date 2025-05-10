@@ -5,6 +5,10 @@
   outline: unset;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +20,6 @@
 }
 
 body {
-  background-color: var(--background);
   height: 100vh;
 }
 
@@ -25,7 +28,10 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  color: var(--foreground);
+}
+
 a,
 p,
 li,
@@ -36,7 +42,7 @@ em,
 i,
 figcaption,
 input {
-  color: var(--foreground);
+  color: var(--secondary-foreground);
 }
 
 input {
