@@ -1,0 +1,26 @@
+body{
+    font-family: "Outfit", sans-serif;
+    color: var(--foreground);
+    background-color: var(--background);
+}
+.posisi{
+    display: flex;
+    justify-content: center;
+}
+.kontainer{
+    background-color: var(--card);
+    height: 100%;
+    width: 400px;
+    border: 1px var(--muted-foreground) solid;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 100px;
+}
+.judul{
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.box_isi{
+    padding-top: 25px;
+}

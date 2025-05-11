@@ -1,0 +1,52 @@
+@import url(color.css);
+
+.input-box:focus{
+    border: 1px var(--ring) solid;
+    outline: none;  
+}
+.input-box{
+    color: var(--primary-foreground);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 96%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: var(--input);
+    border: 1px var(--muted-foreground) solid;
+}
+.input-box:hover{
+    border: 1px var(--ring) solid;;
+}
+.button-01{
+    color: var(--primary-foreground);
+    background-color: var(--primary);
+    border: none;
+    width: 100%;
+    height: 35px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+.button-01:hover{
+    background-color: var(--destructive);
+}
+.button-02{
+    background-color: var(--input);
+    border: 1px var(--muted-foreground) solid;   
+    width: 100%;
+    height: 35px;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: var(--foreground);
+}
+.button-02:hover{
+    background-color: var(--sidebar-ring);
+    border: none;
+}
+.button-02:focus{
+    background-color: var(--destructive);
+}
+.footer{
+    text-align: center;
+    padding-top: 30px;
+}
