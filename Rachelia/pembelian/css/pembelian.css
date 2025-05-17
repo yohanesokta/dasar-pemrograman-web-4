@@ -10,7 +10,7 @@ body {
 }
 
 .paragraf{
-    color: var(--muted-foreground);
+    color: var(--foreground);
     text-align: center;
     font-size: 25px;
     font-family: "Outfit", sans-serif;
@@ -29,7 +29,7 @@ body {
 }
 
 .box{
-    background-color: var(--popover);
+    background-color: var(--secondary);
     width: 170px;
     height: 280px; 
     border-radius: 10px;
@@ -38,6 +38,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     position: relative;
+    border: 2px solid var(--sidebar-primary);
 }
 
 .judul{
