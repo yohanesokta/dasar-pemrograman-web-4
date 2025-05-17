@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    padding: 20px;
+}
+
+.review-container {
+    background-color: var(--secondary);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--border);
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid var(--foreground);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--foreground);
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    flex-direction: row-reverse;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    color:  var(--muted-foreground);
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.rating input:checked ~ label {
+    color: var(--chart-5);
+}
+
+textarea {
+    background-color: var(--primary-foreground);
+    color: var(--foreground);
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--popover-foreground);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 5px 5px;
+    margin: 0 auto 20px auto;
+    max-width: 640px;
+}
+
+.submit-btn {
+    background-color: var(--popover-foreground);
+    color: var(--muted);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--sidebar-accent-foreground);
+}
