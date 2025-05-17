@@ -1,0 +1,25 @@
+.container {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.grid_layout {
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+  ;
+  grid-template-columns: 240px auto;
+  grid-template-rows: 56px auto;
+}
+
+.brand_logo {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.brand_logo > span {
+  color: var(--primary);
+}
