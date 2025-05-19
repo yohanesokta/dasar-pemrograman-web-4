@@ -59,9 +59,7 @@ body {
 }
 
 .textlist {
-    list-style-type: disc !important;
-    list-style-position: inside !important;
-    padding-left: 20px !important;
+    padding-left: 20px;
     margin-top: 14px;
     margin-bottom: 10px;
     font-family: "Outfit", sans-serif;
