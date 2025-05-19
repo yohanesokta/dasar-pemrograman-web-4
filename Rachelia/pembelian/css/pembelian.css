@@ -55,14 +55,15 @@ body {
 .hurufjudul{
     margin: 0;
     font-family: "Outfit", sans-serif;
-    font-size: x-large;
+    font-size: 24px;
 }
 
-.list{
-    color: var(--foreground);
-    font-family: "Outfit", sans-serif;
+.textlist {
+    padding-left: 20px;
     margin-top: 14px;
     margin-bottom: 10px;
+    font-family: "Outfit", sans-serif;
+    color: var(--foreground);
 }
 
 .boxpilih{
@@ -87,7 +88,7 @@ body {
 }
 
 .boxpilih button:hover {
-    background-color: var(--chart-3);   
+    background-color: var(--chart-5);   
     box-shadow: var(--chart-3);
 }
 
