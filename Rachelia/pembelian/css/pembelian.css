@@ -82,9 +82,7 @@ body {
     font-family: "Outfit", sans-serif;
     font-size: large;
     font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    min-width: 140px;           
+    cursor: pointer;           
 }
 
 .boxpilih button:hover {
