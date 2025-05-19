@@ -36,6 +36,7 @@
     border: 1px var(--muted-foreground) solid;
     border-radius: 6px;
     background-color: var(--input);
+    color: var(pr);
 }
 .keterangan{
     padding-top: 10px;
