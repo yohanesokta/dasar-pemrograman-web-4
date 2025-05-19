@@ -24,13 +24,13 @@ aside, main, footer {
 
 
 /* HEADER */
-header {
+header#header {
   grid-area: header;
   background-color: var(--background);
   border-bottom: 1px var(--border) solid;
 }
 
-header .header_flex {
+header#header .header_flex {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -38,37 +38,37 @@ header .header_flex {
   row-gap: 16px;
 }
 
-header .header_flex .header_logo {
+header#header .header_flex .header_logo {
   font-size: 20px;
   font-weight: 500;
 }
 
-header .header_flex .header_logo > span {
+header#header .header_flex .header_logo > span {
   color: var(--primary);
 }
 
-header .header_flex .header_search label {
+header#header .header_flex .header_search label {
   position: relative;
 }
 
-header .header_flex .header_search label > i {
+header#header .header_flex .header_search label > i {
   position: absolute;
   top: 3px;
   left: 14px;
 }
 
-header .header_flex .header_search input {
+header#header .header_flex .header_search input {
   font-size: 16px;
   border: 1px var(--border) solid;
   padding: 8px 16px 8px 48px;
   border-radius: var(--radius);
 }
 
-header .header_flex .header_search input:focus {
+header#header .header_flex .header_search input:focus {
   outline: 1px var(--primary) solid;
 }
 
-header .header_flex .header_cta {
+header#header .header_flex .header_cta {
   display: flex;
   column-gap: 12px;
 }
