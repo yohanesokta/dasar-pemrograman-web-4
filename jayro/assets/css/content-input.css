@@ -40,7 +40,7 @@
   text-decoration: none;
   background-color: var(--input);
   border: 1px var(--muted-foreground) solid;
-  height: 40px;
+  height: 30px;
   width: 100%;
   margin-top: 15px;
   border-radius: 5px;
