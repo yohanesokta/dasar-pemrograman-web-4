@@ -13,9 +13,6 @@ implementasi colaborasi gituhub untuk project web di matakulihah **DASAR PEMROGR
 
 ### Rules
 
--   dilarang force push ke branch main
+-   Dilarang force push ke branch main
 -   setiap user menggunakan branch dengan nama mereka
 -   review bisa dilakukan siapa aja
--   commit dengan perubahan dan pesan yang jelas
--   setujui conflict file dan penetapan perubahan yang ada dengan jelas
-

@@ -1,0 +1,40 @@
+.wishlist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.film-card {
+    flex: 1 1 calc(25% - 1.5rem);
+    box-sizing: border-box;
+    border: 10px;
+    background: var(--primary-foreground);
+    padding: 10px;
+    border-radius: 8px;
+    border-color: var(--ring);
+    align-items: center;
+}
+
+
+.film-card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.film-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.watch-button {
+    color: var(--sidebar);
+    background-color: var(--primary);
+    border: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}

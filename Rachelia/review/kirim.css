@@ -1,0 +1,41 @@
+body {
+    background-color: var(--background);
+}
+
+.isicontent {
+    background-color: var(--secondary);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--border);
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    border: 2px solid var(--foreground);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.paragraf {
+    color: var(--foreground);
+    text-align: center;
+    font-size: 25px;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.menuutama {
+    background-color: var(--popover-foreground);
+    color: var(--muted);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto;
+}
+
+.menuutama:hover {
+    background-color: var(--sidebar-accent-foreground);
+}

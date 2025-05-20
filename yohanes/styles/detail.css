@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    bottom: 0;
+    background: var(--background);
+    font-family: "Outfit",sans-serif;
+}
+
+.detail { 
+    position: relative;
+    height: 80vh;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    position: relative;
+    .logo{
+        margin:20px;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        width: 200px;
+        img {
+            width: 100%;
+            height: max-content;
+        }
+    }
+    .bottom-info {
+        overflow: hidden;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 120px;
+        display: flex;
+        background: #ffffff;
+        background: linear-gradient(0deg, var(--background) 0%, rgba(255, 255, 255, 0) 70%,rgba(255, 255, 255, 0) 100%);
+        justify-content: space-around;
+        backdrop-filter: blur(20px);
+        align-items: center;
+        .buy{
+            height: 100%;
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            p {
+                margin: 0;
+                font-size: 10pt;
+                color: var(--primary-foreground);
+            }
+            button {
+                padding: 15px 60px;
+                border-radius: 5px;
+                outline: 0;
+                font-weight: bold;
+                font-size: 12pt;
+                border: 0;
+                cursor: pointer;
+                box-shadow: 0 0 100px var(--foreground);
+            }
+            button:hover{
+                transition: .3s ease-in-out;
+                opacity: .6 ;
+            }
+        }
+        .simple-info{
+            color: var(--primary-foreground);
+            width: 800px;
+        }
+    }
+    
+}
+.deskripsi {
+    margin:  80px;
+    color: var(--foreground);
+    h1{
+        margin: 10px;
+    }
+    .menu{
+        display: flex;
+        button{
+            cursor: pointer;
+            border: none;
+            border-left: 1px solid var(--foreground);
+            border-right: 1px solid var(--foreground);
+            font-size: 12pt;
+            width: 200px;
+            padding: 10px 20px;
+        }
+        button:first-child{
+            border-right: none;
+        }
+        button:last-child{
+            border-left: none;
+        }
+        .active{
+            opacity: .5;
+        }
+    }
+}

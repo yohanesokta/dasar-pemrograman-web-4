@@ -24,6 +24,7 @@
     width: 300px;
     border: 1px var(--muted-foreground) solid;
     color: var(--foreground);
+
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.143);
 }
 .profil{
@@ -36,7 +37,10 @@
     border: 1px var(--muted-foreground) solid;
     border-radius: 6px;
     background-color: var(--input);
-    color: var(pr);
+    color: var(--popover-foreground);
+    border: 1px black solid;
+    border-radius: 6px;
+    background-color: gray;
 }
 .keterangan{
     padding-top: 10px;
@@ -56,8 +60,6 @@
 
 .righ-profil{
     margin-left: 50px;
-    height: 600px;
-    width: 700px;
 }
 .isi-bio{
     margin-top: 30px;
