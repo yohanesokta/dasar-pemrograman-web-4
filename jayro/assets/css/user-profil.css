@@ -36,7 +36,7 @@
     border: 1px var(--muted-foreground) solid;
     border-radius: 6px;
     background-color: var(--input);
-    color: var(pr);
+    color: var(--popover-foreground);
 }
 .keterangan{
     padding-top: 10px;
@@ -53,11 +53,8 @@
     border-radius: 6px;
     background-color: gray;
 }
-
 .righ-profil{
     margin-left: 50px;
-    height: 600px;
-    width: 700px;
 }
 .isi-bio{
     margin-top: 30px;
@@ -65,9 +62,6 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
-.isi-bio span{
-    padding-left: 10px;
 }
 .isi{
     padding-right: 200px;

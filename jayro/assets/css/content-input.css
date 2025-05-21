@@ -40,8 +40,9 @@
   text-decoration: none;
   background-color: var(--input);
   border: 1px var(--muted-foreground) solid;
-  height: 30px;
   width: 100%;
+  padding-top: 10px;
+  height: 30px;
   margin-top: 15px;
   border-radius: 5px;
   color: var(--popover-foreground);
