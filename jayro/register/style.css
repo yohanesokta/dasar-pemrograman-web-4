@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, sans-serif;
+}
+.container{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.judul{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+.deskripsi{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
+.optional_login{
+    text-align: center;
+    margin-top: 20px;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit_button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+}

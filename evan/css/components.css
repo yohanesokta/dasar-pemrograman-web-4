@@ -1,0 +1,75 @@
+/* BUTTON */
+.button, .button_outline, .button_ghost {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  border-radius: var(--radius);
+}
+
+.button_ghost:hover, .button_ghost:hover i {
+  color: var(--secondary-foreground);
+  background-color: var(--primary);
+}
+
+
+.button_outline:hover {
+  background-color: var(--secondary);
+}
+
+.button_ghost, .button_outline {
+  color: var(--secondary-foreground);
+  background-color: transparent;
+}
+
+.button {
+  background-color: var(--secondary);
+}
+
+.button_outline {
+  border: 1px var(--border) solid;
+}
+
+
+
+
+/* JUMBOTRON */
+.jumbotron {
+  max-width: 72rem;
+  height: 540px;
+  border-radius: var(--radius);
+  background-image: url(../img/poster/the-batman.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.jumbotron .jumbotron_cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(245, 245, 245, 0.534);
+  z-index: 1;
+}
+
+.jumbotron .jumbotron_cta {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  row-gap: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  color: white !important;
+}
