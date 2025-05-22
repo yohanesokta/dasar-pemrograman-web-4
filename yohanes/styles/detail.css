@@ -103,3 +103,10 @@ body {
         }
     }
 }
+li{
+    margin: 10px 0;
+    max-width: 800px;
+}
+li span {
+    font-weight: 300;
+}
