@@ -1,0 +1,45 @@
+main {
+    h1 {
+            font-size: 18pt;
+            i {
+                font-size: 14pt;
+            }
+    }
+}
+.container-video{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.video-card {
+    width: 350px;
+    padding: 10px;
+    cursor: pointer;
+    img{
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        height: 180px;
+    }
+    h1{
+        margin: 0 10px 10px 10px;
+        font-size: 14pt;
+    }
+    p{
+        font-size: 10pt;
+        margin: 0 10px;
+        margin-bottom: 10px;
+        color: gray;
+    }
+    span{
+        background-color: gray;
+        padding: 4px 10px;
+        font-size: 8pt;
+        color: white;
+        margin: 10px;
+        border-radius: 4px;
+        
+    }
+}
