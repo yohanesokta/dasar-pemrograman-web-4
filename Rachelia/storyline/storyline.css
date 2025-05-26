@@ -1,43 +1,39 @@
 body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--background);
-    height: 100%; 
-    margin: 0; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
 }
 
+/* Box utama */
 .isicontent {
     background-color: var(--secondary);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px var(--border);
-    width: 500px;
-    height: 300px;
+    width: 900px;
+    height: auto;
+    margin: 0; /* Menghapus margin agar box tetap di tengah */
     border: 2px solid var(--foreground);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.judul {
     text-align: center;
 }
 
-img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
-    margin-top: 60px;
-}
-
-.paragraf {
+.isistoryline {
     color: var(--foreground);
-    font-size: 25px;
-    margin: 0;
-    padding: 10px;
-    margin-bottom: 50px;
+    text-align: justify;
+    font-size: 20px;
+    padding: 0 20px;
 }
 
-.menuutama {
+.kembali {
     background-color: var(--popover-foreground);
     color: var(--muted);
     border: none;
@@ -46,10 +42,9 @@ img {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
-    margin-top: 20px;
-    text-align: center;
+    margin-top: auto;
 }
 
-.menuutama:hover {
+.kembali:hover {
     background-color: var(--sidebar-accent-foreground);
 }
