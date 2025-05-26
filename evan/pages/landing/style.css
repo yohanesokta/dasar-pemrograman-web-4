@@ -1,0 +1,57 @@
+/* BODY */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* HEADER */
+#header {
+  padding: 16px 0;
+  /* background-color: var(--background);
+  border-bottom: 1px var(--border) solid; */
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+#header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 8px;
+}
+
+/* MAIN */
+/* MAIN POSTER UMBOTRON */
+#main .header_jumbotron .header_welcoming {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#main .header_jumbotron .header_welcoming h1 {
+  font-size: 48px;
+}
+
+#main .header_jumbotron .header_welcoming p {
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+#main .header_jumbotron .header_welcoming p a {
+  color: #3b82f6;
+}
+#main .header_jumbotron .header_welcoming p a:hover {
+  color: #60a5fa;
+}
