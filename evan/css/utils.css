@@ -30,12 +30,9 @@
 
 
 
-/* MOVIE POSTER SECTION */
-.movie_posters_section h2 {
-  margin-bottom: 16px;
-}
-
-.movie_posters_section .movie_poster_grid {
+/* MOVIE POSTER grid */
+.movie_poster_grid {
+  margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(208px, 256px));
   gap: 16px;
