@@ -1,7 +1,7 @@
 import GenerateMovieSection from "./generate-movie-section.js";
 import Jumbotron from "./jumbotron.js";
 
-export default async function GenerateHomeContent() {
+async function GenerateHomeContent() {
   const main = document.getElementById("main");
   main.innerHTML =
     (await Jumbotron()) +

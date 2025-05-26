@@ -10,11 +10,11 @@ export default async function GenerateMovieSection(type, title) {
         ${movies
           .map(
             (movie) => `
-            <figure class="backdrop" title="${movie.title}">
-              <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} backdrop">
+            <figure class="poster_card" title="${movie.title}">
+              <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
               <figcaption>
-                <span class="backdrop_title">${movie.title}</span>
-                <span class="backdrop_description">${movie.release_date}</span>
+                <span class="poster_card_title">${movie.title}</span>
+                <span class="poster_card_description">${movie.release_date}</span>
               </figcaption>
             </figure>
             `
