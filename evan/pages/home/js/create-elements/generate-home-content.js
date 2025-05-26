@@ -1,7 +1,7 @@
 import GenerateMovieSection from "./generate-movie-section.js";
 import Jumbotron from "./jumbotron.js";
 
-async function GenerateHomeContent() {
+(async function GenerateHomeContent() {
   const main = document.getElementById("main");
   main.innerHTML =
     (await Jumbotron()) +
@@ -9,4 +9,4 @@ async function GenerateHomeContent() {
     (await GenerateMovieSection("popular", "Popular")) +
     (await GenerateMovieSection("top_rated", "Top Rated")) +
     (await GenerateMovieSection("upcoming", "Upcoming"));
-}
+})()
