@@ -135,26 +135,26 @@
 
 
 /* BACKDROP CARD */
-.backdrop {
+.poster_card {
   border: 1px var(--border) solid;
   padding: 8px;
   border-radius: var(--radius);
   background-color: var(--card);
 }
 
-.backdrop > img {
+.poster_card > img {
   width: 100%;
   border-radius: var(--radius);
 }
 
-.backdrop figcaption {
+.poster_card figcaption {
   display: flex;
   flex-direction: column;
   row-gap: 6px;
   margin-top: 12px;
 }
 
-.backdrop_title {
+.poster_card_title {
   width: 96%;
   font-size: 20px;
   color: var(--card-foreground);
@@ -163,6 +163,6 @@
   white-space: nowrap;
 }
 
-.backdrop_description {
+.poster_card_description {
   font-size: 14px;
 }
