@@ -1,9 +1,21 @@
-.container {
-  max-width: 1536px;
+/* CONTAINER */
+.container, .container_xl {
   margin: 0 auto;
   padding: 0 24px;
 }
 
+.container {
+  max-width: 1536px;
+}
+
+.container_xl {
+  max-width: 1024px;
+}
+
+
+
+
+/* GRID LAYOUT */
 .grid_layout {
   height: 100%;
   display: grid;
@@ -15,11 +27,22 @@
   grid-template-rows: 64px auto;
 }
 
-.brand_logo {
-  font-size: 20px;
-  font-weight: 500;
+
+
+
+/* MOVIE POSTER SECTION */
+.movie_posters_section h2 {
+  margin-bottom: 16px;
 }
 
-.brand_logo > span {
-  color: var(--primary);
+.movie_posters_section .movie_poster_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(208px, 256px));
+  gap: 16px;
 }
+
+
+
+
+/* RESPONSIVE BREAKPOINT */
+/* TABLET */

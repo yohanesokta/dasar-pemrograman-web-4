@@ -19,10 +19,6 @@
   list-style: none;
 }
 
-body {
-  height: 100vh;
-}
-
 h1,
 h2,
 h3,
@@ -39,12 +35,24 @@ span,
 b,
 strong,
 em,
-i,
 figcaption,
 input {
-  color: var(--secondary-foreground);
+  color: var(--muted-foreground);
+  font-weight: 500;
 }
+
+a:hover {
+  color: #3b82f6;
+}
+
+/* a:hover {
+  color: #60a5fa;
+} */
 
 input {
   background-color: inherit;
+}
+
+a, button {
+  cursor: pointer;
 }
