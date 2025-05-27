@@ -34,8 +34,8 @@
 .movie_poster_grid {
   margin-top: 16px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(208px, 256px));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 256px));
+  gap: 20px;
 }
 
 
