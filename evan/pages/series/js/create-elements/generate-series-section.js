@@ -12,7 +12,9 @@ import { fetchMovies } from "../fetch-movies.js";
           .map(
             (movie) => `
           <figure class="backdrop" title="${movie.name}">
-            <img src="https://image.tmdb.org/t/p/w500${movie.backdrop_path}" alt="${movie.name} backdrop">
+            <div class="backdrop_cover">
+              <img src="https://image.tmdb.org/t/p/w500${movie.backdrop_path}" alt="${movie.name} backdrop">
+            </div>
             <figcaption>${movie.name}</figcaption>
           </figure>
         `
