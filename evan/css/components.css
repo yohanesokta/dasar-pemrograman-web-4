@@ -171,20 +171,54 @@
 
 
 /* BACKDROP CARD */
-.backdrop {
-  height: auto;
-  padding: 8px;
-  border: 1px var(--border) solid;
+/* .backdrop {
+  position: relative;
+  overflow: hidden;
   border-radius: var(--radius);
-  background-color: var(--card);
 }
 
+.backdrop::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+} */
 
-.backdrop > img {
+
+.backdrop_cover {
   width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
   border-radius: var(--radius);
+  border: 1px var(--border) solid;
+  overflow: hidden;
+}
+
+.backdrop_cover::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.backdrop_cover:hover::before {
+  content: "\25BA";
+  color: oklch(0.985 0 0);
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 75%);
+}
+
+.backdrop_cover > img {
+  width: 100%;
 }
 
 .backdrop > figcaption {
-  margin-top: 12px;
+  padding: 8px 8px 0;
+  color: var(--card-foreground);
 }
