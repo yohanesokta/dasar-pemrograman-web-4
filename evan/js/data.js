@@ -39,8 +39,8 @@ export const sidebar_menus = {
       icon: `<i class="fa-solid fa-hourglass-half"></i>`,
     },
   ],
+  discover: ["Movie", "TV"],
   trending: ["All", "Movies", "People", "TV"],
-  // genres: ["Action", "Comedy", "Horror", "Science Fiction", "K-drama"],
   others: ["Kids Mode", "Source", "Developers"],
 };
 

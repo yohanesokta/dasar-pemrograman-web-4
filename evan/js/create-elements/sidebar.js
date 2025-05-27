@@ -28,6 +28,21 @@ export default function Sidebar() {
       </div>
       </section>
   `;
+  const discover = `
+    <section>
+      <h3>Discover</h3>
+      <div>
+        ${sidebar_menus.discover
+          .map(
+            (d) =>
+              `<a href="" class="button button_ghost">
+              ${d}
+            </a>`
+          )
+          .join("")}
+      </div>
+      </section>
+  `;
   const trending = `
     <section>
       <h3>Trending</h3>
@@ -58,5 +73,5 @@ export default function Sidebar() {
       </div>
       </section>
   `;
-  sidebar.innerHTML = sidebar_you + movie_list + trending + sidebar_others;
+  sidebar.innerHTML = sidebar_you + movie_list + discover + trending + sidebar_others;
 }
