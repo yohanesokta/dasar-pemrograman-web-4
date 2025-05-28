@@ -35,8 +35,8 @@ export default function Sidebar() {
         ${sidebar_menus.discover
           .map(
             (d) =>
-              `<a href="" class="button button_ghost">
-              ${d}
+              `<a href="${d.path}" class="button button_ghost">
+              ${d.name}
             </a>`
           )
           .join("")}

@@ -39,8 +39,17 @@ export const sidebar_menus = {
       icon: `<i class="fa-solid fa-hourglass-half"></i>`,
     },
   ],
-  discover: ["Movie", "TV"],
-  trending: ["All", "Movies", "People", "TV"],
+  discover: [
+    {
+      name: "Movies",
+      path: "/evan/pages/@Discover/movie/index.html",
+    },
+    {
+      name: "TV / Series",
+      path: "/evan/pages/@Discover/tv-series/index.html",
+    },
+  ],
+  trending: ["All", "Movies", "People", "TV / Series"],
   others: ["Kids Mode", "Source", "Developers"],
 };
 
