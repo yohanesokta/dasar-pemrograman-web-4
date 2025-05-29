@@ -1,0 +1,81 @@
+/* Basic Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Award Section */
+.award-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.award-heading {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Awards Layout - Simple List */
+.award-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Award Item - Clean Design */
+.award-badge {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Icon Style */
+.award-symbol {
+  width: 50px;
+  height: 50px;
+}
+
+.award-symbol img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Text Content */
+.award-badge h2 {
+  margin: 0;
+  color: #444;
+  font-size: 1.2rem;
+}
+
+.award-badge p {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.award-badge span {
+  margin-left: auto;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .award-badge {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .award-badge span {
+    margin-left: 0;
+  }
+}
