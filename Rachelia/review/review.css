@@ -1,5 +1,4 @@
 body {
-    font-family: Arial, sans-serif;
     background-color: var(--background);
     padding: 20px;
 }
@@ -51,9 +50,7 @@ textarea {
     border: 2px solid var(--popover-foreground);
     border-radius: 4px;
     margin-bottom: 20px;
-    padding: 5px 5px;
-    margin: 0 auto 20px auto;
-    max-width: 640px;
+    box-sizing: border-box;
 }
 
 .submit-btn {
