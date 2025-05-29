@@ -1,0 +1,80 @@
+@import url(color.css);
+
+body{
+    color: var(--foreground);
+    background-color: var(--background);
+    font-family:"Outfit", sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.box{
+   border: 2px var(--border) solid;
+   border-radius: 15px;
+   padding: 20px;
+   height: auto;
+   width: 500px;
+}
+.judul{
+    font-size: 20px;
+    font-weight: 800;
+    text-align: left;
+}
+.deskrip{
+    margin-top: 20px;
+}
+.sub_box{
+    margin-top: 20px;
+    border: 2px var(--border) solid;
+    border-radius: 15px;
+    padding: 20px;
+}
+.label-input{
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+#prev_password,#new_password{
+    color: var(--primary-foreground);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 96%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: var(--input);
+    border: 1px var(--muted-foreground) solid;
+}
+#prev_password:hover,#new_password:hover {
+  border: 2px var(--ring) solid;
+}
+#prev_password:focus,#new_password:focus {
+  border: 2px var(--ring) solid;
+  outline: none;
+}
+.g-button{
+    display: flex;
+    justify-content: end;
+    margin-right: 5px;
+}
+.button-05{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    width: 200px;
+    height: 30px;
+    padding-top: 7px;
+    border: 1px var(--muted-foreground) solid;
+    border-radius: 6px;
+    background-color: var(--input);
+}
+.button-05:hover{
+    background-color: var(--sidebar-ring);
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: var(--foreground);
+    font-weight: 600;
+}
