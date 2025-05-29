@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="../../evan/css/components.css" />
     <link rel="stylesheet" href="../styles/compile/layout-old.css" />
     <link rel="stylesheet" href="../styles/detail.css">
-    <link rel="stylesheet" href="../styles/actor-profile.css">
+    <link rel="stylesheet" href="../styles/upload.css">
   </head>
-  <body>
+  <body class="li">
     <div class="grid_layout">
       <header>
         <div class="header_flex container">
@@ -83,81 +83,81 @@
       </aside>
       <div class="content">
         <main>
-          <div class="topcast">
-            <div class="line"></div>
-            
-            <h1>Top Cast</h1>
-            <div class="right-arrow"></div>
-          </div>
-            <div class="actor-container">
-              <div class="profil-container">
-                <img src="../assets/Minecraft/actor/jason-momoa.avif" alt="">
-                <div class="profil-detail">
-                  <p>Jason Momoa</p>
-                  <span>Garrett</span>
-                </div>
-              </div>
 
-              <div class="profil-container">
-                <img src="../assets/Minecraft/actor/jackBlack.jpeg" alt="">
-                <div class="profil-detail">
-                  <p>Jack Black</p>
-                  <span>Steve</span>
-                </div>
-              </div>
-
-              <div class="profil-container">
-                <img src="../assets/Minecraft/actor/sebastianeugene.webp" alt="">
-                <div class="profil-detail">
-                  <p>Sebastian Hansen</p>
-                  <span>Henry</span>
-                </div>
-              </div>
-
-              <div class="profil-container">
-                <img src="../assets/Minecraft/actor/emmamyers.webp" alt="">
-                <div class="profil-detail">
-                  <p>Emma Myers</p>
-                  <span>Natalie</span>
-                </div>
-              </div>
-
-
-              <div class="profil-container">
-                <img src="../assets/Minecraft/actor/jenniferCoolidge.webp" alt="">
-                <div class="profil-detail">
-                  <p>Jennifer Coolidge</p>
-                  <span>Vice Principal Marlene</span>
-                </div>
-              </div>
-
-              <div class="profil-container">
-                <img src="../assets/Minecraft/actor/DanielleBrooks.jpeg" alt="">
-                <div class="profil-detail">
-                  <p>Danielle Brooks</p>
-                  <span>Dawn</span>
-                </div>
-              </div>
-
-
-              <div class="actor-container">
-                <div class="profil-container">
-                  <img src="../assets/Minecraft/actor/rachelhouse.webp" alt="">
-                  <div class="profil-detail">
-                    <p>Rachel House</p>
-                    <span>Malgosha (voice)</span>
-                  </div>
-                </div>
-  
-                <div class="profil-container">
-                  <img src="../assets/Minecraft/actor/Jemaine Clement.jpg" alt="">
-                  <div class="profil-detail">
-                    <p>Jemaine Clement</p>
-                    <span>Daryl(voice)…</span>
-                  </div>
-                </div>
-  
+          <div class="container-porm">
+        <h1>Unggah Film</h1>
+        <form action="/">
+            <div class="form-group">
+                <label for="judul">Judul Film:</label>
+                <input type="text" id="judul" name="judul" required>
             </div>
+
+            <div class="form-group">
+                <label for="video">File Video Film:</label>
+                <input type="file" id="video" name="video" accept="video/*" required>
+            </div>
+
+            <div class="form-group">
+                <label for="poster">Poster Film:</label>
+                <input type="file" id="poster" name="poster" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="sutradara">Sutradara:</label>
+                <input type="text" id="sutradara" name="sutradara">
+            </div>
+
+            <div class="form-group">
+                <label for="tahun_rilis">Tanggal Rilis:</label>
+                <input type="date" id="tahun_rilis" name="tahun_rilis" min="1800" max="2099" step="1">
+            </div>
+
+            <div class="form-group">
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" placeholder="Contoh: Aksi, Komedi, Drama">
+            </div>
+
+            <div class="form-group">
+                <label for="aktor">Nama Aktor (pisahkan dengan koma):</label>
+                <input type="text" id="aktor" name="aktor" placeholder="Contoh: Aktor A, Aktris B, Aktor C">
+            </div>
+
+            <div class="form-group">
+                <label for="sinopsis">Sinopsis:</label>
+                <textarea id="sinopsis" name="sinopsis" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="durasi">Durasi (menit):</label>
+                <input type="number" id="durasi" name="durasi" min="1">
+            </div>
+
+            <div class="form-group">
+                <label for="rating_usia">Rating Usia:</label>
+                <select id="rating_usia" name="rating_usia">
+                    <option value="">Pilih Rating</option>
+                    <option value="SU">SU (Semua Umur)</option>
+                    <option value="R13+">R13+ (Remaja 13+)</option>
+                    <option value="D17+">D17+ (Dewasa 17+)</option>
+                    <option value="D21+">D21+ (Dewasa 21+)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bahasa">Bahasa Asli:</label>
+                <input type="text" id="bahasa" name="bahasa" placeholder="Indonesia">
+            </div>
+
+            <div class="form-group">
+                <label for="negara_asal">Negara Asal:</label>
+                <input type="text" id="negara_asal" name="negara_asal" placeholder="Indonesia">
+            </div>
+
+            <button type="submit">Unggah Film</button>
+        </form>
+    </div>
+          
+
         </main>
         <footer>
           <section>
