@@ -1,0 +1,58 @@
+body{
+
+}
+.name{
+    flex: 1;
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.fr_name{
+    color: orangered;
+    font-size: 25px;
+}
+.re_name{
+    padding-top: 9px;
+}
+.g-kontent{
+    display: flex;
+    justify-content: center;
+}
+.box_main{
+    margin-top: 200px;
+}
+.main{
+    display: flex;
+    gap: 100px;
+    list-style: none;
+}
+li{
+    display: flex;
+    justify-content: center;
+}
+.username{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.img{
+    display: list-item;
+    justify-content: center;
+}
+i{
+    padding: 20px;
+    font-size: 100px;
+    border: 3px rgb(0, 0, 0) solid;
+}
+.tambah_pengguna{
+    margin-top: 100px;
+}
+.button-07{
+    padding: 10px 100px 10px 100px;
+    border: 2px black solid;
+    border-radius: 10px;
+    background-color: gray;
+}
+.button-07:hover{
+    border: none;
+    background-color: orangered;
+}
