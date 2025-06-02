@@ -1,0 +1,57 @@
+.kontainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.box{
+    height: 400px;
+    width: 850px;
+    border: 2px var(--ring) solid;
+}
+.title{
+    background-color: var(--primary);
+    font-weight: 700;
+    padding: 5px;
+    padding-left: 10px;
+}
+.main-box{
+    padding: 40px;
+    margin-top: 15px;
+}
+.sub-box{
+    padding: 10px 25px 0 25px;
+    border-top: 1px var(--secondary-foreground) solid;
+}
+.judul{
+    border-bottom: 4px var(--secondary-foreground) solid;
+    width: 80px;
+    padding: 0 10px 0 10px;
+    font-size: 19px;
+}
+.deskripsi{
+    color: var(--muted-foreground);
+}
+.display-button{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 50px 0 10px;
+}
+.button-06{
+    background-color: var(--input);
+    height: 90px;
+    width: 200px;
+    text-align: center;
+}
+.button-06:hover{
+    background-color: var(--sidebar-ring);
+    border: none;
+}
+.sub-button{
+    padding-top: 25px;
+    text-decoration: none;
+    font-size: 17px;
+}
+a{
+    text-decoration: none;
+}

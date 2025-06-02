@@ -18,9 +18,11 @@ function parseJwt(token) {
   return JSON.parse(jsonPayload);
 }
 console.log(parseJwt(token));
-let data = parseJwt(token)
-let profil = data.user_picture
-let username = data.username
-document.getElementById("user-profil").setAttribute("src",profil)
-document.getElementById("nama").innerHTML=username
-
+let data = parseJwt(token);
+let profil = data.user_picture;
+let username = data.username;
+let email = data.user_email;
+document.getElementById("user-profil").setAttribute("src", profil);
+document.getElementById("nama").innerHTML = username;
+document.getElementById("email").innerHTML = email;
+document.getElementById("user").innerHTML = username;
