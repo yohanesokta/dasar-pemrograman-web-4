@@ -10,7 +10,6 @@ try {
     die("Environment variable validation failed: " . $e->getMessage());
 }
 
-var_dump($_ENV["DB_HOST"]);
 $conn = new mysqli($_ENV["DB_HOST"], $_ENV["DB_USERNAME"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
 
 if ($conn->connect_error) {
