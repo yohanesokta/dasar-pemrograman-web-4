@@ -1,0 +1,63 @@
+body{
+    background-color: var(--background);
+    color: var(--popover-foreground);
+    font-family: "Outfit", sans-serif;
+}
+.name{
+    flex: 1;
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.fr_name{
+    color: var(--primary);
+    font-size: 25px;
+    font-weight: 600;
+}
+.re_name{
+    padding-top: 9px;
+}
+.g-kontent{
+    display: flex;
+    justify-content: center;
+}
+.box_main{
+    margin-top: 200px;
+}
+.main{
+    display: flex;
+    gap: 100px;
+    list-style: none;
+    padding-left: 0px;
+}
+li{
+    display: flex;
+    justify-content: center;
+}
+.username{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.img{
+    display: list-item;
+    justify-content: center;
+}
+i{
+    padding: 20px;
+    font-size: 100px;
+    background-color: var(--muted-foreground);
+    border: 3px var(--popover-foreground) solid;
+}
+.tambah_pengguna{
+    margin-top: 100px;
+}
+.button-07{
+    padding: 10px 100px 10px 100px;
+    border: 2px var(--ring) solid;
+    border-radius: 10px;
+    background-color: var(--sidebar-primary-foreground);
+}
+.button-07:hover{
+    border: none;
+    background-color: var(--primary);
+}
