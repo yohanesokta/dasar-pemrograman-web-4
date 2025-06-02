@@ -76,6 +76,7 @@
     border: 1px var(--muted-foreground) solid;
     border-radius: 6px;
     background-color: var(--input);
+
 }
 .righ-profil{
     margin-left: 50px;
