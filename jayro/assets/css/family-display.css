@@ -1,5 +1,7 @@
 body{
-
+    background-color: var(--background);
+    color: var(--popover-foreground);
+    font-family: "Outfit", sans-serif;
 }
 .name{
     flex: 1;
@@ -8,8 +10,9 @@ body{
     margin-top: 20px;
 }
 .fr_name{
-    color: orangered;
+    color: var(--primary);
     font-size: 25px;
+    font-weight: 600;
 }
 .re_name{
     padding-top: 9px;
@@ -25,6 +28,7 @@ body{
     display: flex;
     gap: 100px;
     list-style: none;
+    padding-left: 0px;
 }
 li{
     display: flex;
@@ -41,18 +45,19 @@ li{
 i{
     padding: 20px;
     font-size: 100px;
-    border: 3px rgb(0, 0, 0) solid;
+    background-color: var(--muted-foreground);
+    border: 3px var(--popover-foreground) solid;
 }
 .tambah_pengguna{
     margin-top: 100px;
 }
 .button-07{
     padding: 10px 100px 10px 100px;
-    border: 2px black solid;
+    border: 2px var(--ring) solid;
     border-radius: 10px;
-    background-color: gray;
+    background-color: var(--sidebar-primary-foreground);
 }
 .button-07:hover{
     border: none;
-    background-color: orangered;
+    background-color: var(--primary);
 }
