@@ -50,7 +50,17 @@ export const sidebar_menus = {
     },
   ],
   trending: ["All", "Movies", "People", "TV / Series"],
-  others: ["Kids Mode", "Source", "Developers"],
+  others: [
+    // "Kids Mode",
+    {
+      name: "Source",
+      path: "https://github.com/yohanesokta/dasar-pemrograman-web-4",
+    },
+    {
+      name: "Developers",
+      path: "/"
+    },
+  ],
 };
 
 export const footer_premium_menu = [
