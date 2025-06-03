@@ -21,6 +21,7 @@
   align-items: center;
   column-gap: 10px;
   border-radius: var(--radius);
+  background-color: transparent;
 }
 
 .button_primary {
@@ -52,6 +53,27 @@
 .button_outline:hover {
   background-color: var(--primary);
   color: oklch(0.967 0.001 286.375);
+}
+
+.button_search {
+  width: 384px;
+  border: 1px var(--border) solid;
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  position: relative;
+}
+
+.button_search::after {
+  content: "/";
+  position: absolute;
+  right: 12px;
+  background-color: var(--background);
+  border-radius: var(--radius);
+  padding: 4px 6px;
+}
+
+.button_search:hover {
+  background-color: var(--card);
 }
 
 
@@ -171,22 +193,6 @@
 
 
 /* BACKDROP CARD */
-/* .backdrop {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius);
-}
-
-.backdrop::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-} */
-
-
 .backdrop_cover {
   width: 100%;
   aspect-ratio: 16/9;
@@ -221,4 +227,95 @@
 .backdrop > figcaption {
   padding: 8px 8px 0;
   color: var(--card-foreground);
+}
+
+
+
+
+/* SEARCH PREVIEW */
+.search_backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 75%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  z-index: 12;
+}
+
+.search_preview {
+  display: flex;
+  flex-direction: column;
+  width: 576px;
+  height: 384px;
+  border: 1px var(--border) solid;
+  background-color: var(--background);
+  margin-top: 80px;
+  padding: 16px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.search_content {
+  flex: 1;
+  margin-top: 24px;
+  overflow-y: auto;
+}
+
+.search_content .warn_box {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search_list_movie {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.search_list_movie .poster_card {
+  display: flex;
+  column-gap: 16px;
+}
+
+.search_list_movie .poster_card > img {
+  width: 56px;
+  border-radius: var(--radius);
+}
+
+.search_list_movie .poster_card figcaption {
+  width: 100%;
+}
+
+
+
+/* FORM / INPUT */
+label {
+  position: relative;
+  display: block;
+}
+
+label > i {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  color: var(--muted-foreground);
+}
+
+input {
+  width: 100%;
+  font-size: 14px;
+  border: 1px var(--border) solid;
+  padding: 8px 16px 8px 48px;
+  border-radius: var(--radius);
+}
+
+input:focus {
+  outline: 1px var(--primary) solid;
+  outline-offset: 2px;
 }
