@@ -2,26 +2,34 @@
 require_once ("../index.php");
 header("Content-Type: application/json");
 
-if (isset($_POST['username']) && $_POST['username']) {
+$is_active = 0;
+$errors = array("errors" => false,"message" => "");
+
+
+if (isset($_POST['username']) && $_POST['password'] && $_POST['name']) {
     $username = htmlspecialchars($_POST['username']);
     $password = htmlspecialchars($_POST['password']);
+    $name = htmlspecialchars( $_POST['name']);
     
     $sql = "SELECT username FROM users";
     $result = mysqli_query($conn, $sql);
+    
     if (mysqli_num_rows($result) > 0) {
-        echo  json_encode(array("error" => "username is not unique","code" => 400));
-        
+        $errors['errors'] = true;
+        $errors['message'] = 'server errors';
     } else {
         $sql = $conn->prepare("INSERT INTO users (username,password) VALUES (?,?)");
         $sql->bind_param("ss", $username, $password);
         if ($sql->execute()) {
-        echo json_encode(array("message" => "berhasil","code"=> 200,"username"=> $username,"password"=> $password));
+            $errors ["errors"] = false;
         } else {    
-            echo json_encode(array("message"=> "error","code"=>500));
+            $errors['message'] = "username sudah pernah di pakai";
+            $errors['errors'] = true;
         }
     }
 
 } else {
-    echo json_encode(array('error'=> 'field username or password cant blank' , 'code'=> 400));
+    $errors['errors'] = true;
+    $errors['message'] = 'username , password , name harus terisi';
 }
 ?>
