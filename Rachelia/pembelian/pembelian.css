@@ -86,7 +86,7 @@ body {
 }
 
 .boxpilih button:hover {
-    background-color: var(--chart-5);   
+    background-color: var(--muted-foreground);   
     box-shadow: var(--chart-3);
 }
 
