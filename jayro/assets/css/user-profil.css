@@ -12,7 +12,7 @@
 }
 .kontainer-profil{
     width: 1200px;
-    height: 700px;
+    height: 600px;
     display: flex;  
     border: 1px var(--card-foreground) solid;
     border-radius: 10px;
@@ -29,8 +29,9 @@
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.143);
 }
 .profil{
-    height: 275px;
-    padding-bottom: 20px;
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
 }
 .button-03{
     width: 100%;
@@ -49,7 +50,7 @@
     font-size: 10px;
 }
 .box_button{
-    margin-top: 60px;
+    margin-top: 100px;
 }
 .button-04{
     margin-top: 15px;
