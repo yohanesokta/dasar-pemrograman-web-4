@@ -35,10 +35,10 @@
             <?php 
                 if ($is_login) {
             ?>
-            <button class="button button_primary">
+            <a href="./jayro/page/profil user/" class="button button_primary">
                 <p style="color:white;"><?php  echo $user_data['username']; ?></p>
               <i class="fa-solid fa-user"></i>
-            </button>
+            </a>
 
             <?php } else { ?>
                 <a href="./jayro/page/login" class="button button_primary">

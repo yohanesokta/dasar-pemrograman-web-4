@@ -30,7 +30,7 @@
                 <button id="login" class="button-01">LOGIN</button>
                 <div class="g-container">
                     <a
-                    href="https://courseapi.yohancloud.biz.id/auth/google?redirect=http://127.0.0.1:5500/jayro/page/profil%20user/index.html"
+                    href="https://courseapi.yohancloud.biz.id/auth/google?redirect=<?php echo $app_url.'/models/auth/google_callback.php' ?>" 
                     id="google"
                     class="button-02" 
                     >Sign in with Google</a

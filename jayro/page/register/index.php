@@ -56,7 +56,7 @@ require("../../../models/auth/register.php");
           <button id="sign_up" class="button-01">REGISTER</button>
           <div class="g-container">
             <a
-              href="https://courseapi.yohancloud.biz.id/auth/google?redirect=<?php echo 'localhost/dasar-pemrograman-web-4/models/auth/google_callback.php' ?>" 
+              href="https://courseapi.yohancloud.biz.id/auth/google?redirect=<?php echo $app_url.'/models/auth/google_callback.php' ?>" 
               id="google"
               class="button-02" 
               >Sign in with Google</a
