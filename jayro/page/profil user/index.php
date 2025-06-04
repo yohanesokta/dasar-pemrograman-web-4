@@ -1,3 +1,7 @@
+<?php
+  require("../../../models/auth/middleware.php")
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,9 +39,23 @@
             <button class="button button_outline">
               <i class="fa-regular fa-bell"></i>
             </button>
-            <button class="button button_primary">
+            <?php 
+                if ($is_login) {
+            ?>
+            <a href="#" class="button button_primary">
+                <p style="color:white;"><?php  echo $user_data['username']; ?></p>
               <i class="fa-solid fa-user"></i>
-            </button>
+            </a>
+
+            <?php } else { ?>
+                <a href="./jayro/page/login" class="button button_primary">
+                    Login
+                </a>
+
+                <a href="./jayro/page/register" class="button button_primary">
+                    Register
+                </a>
+            <?php  }?>
           </div>
         </div>
       </header>
@@ -65,7 +83,7 @@
                     <a href="../change Password/index.html">Change Password</a>
                   </div>
                   <div class="button-04">
-                    <a href="">Log out</a>
+                    <a href="../../../models/auth/logout.php">Log out</a>
                   </div>
                 </div>
               </div>
@@ -76,19 +94,19 @@
                     <div class="isi-bio">
                       <span>nama</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="nama" value="Nama user">
+                        <input class="input_bio" type="text" name="" id="nama" value="<?php echo $user_data['name'] ?>">
                       </div>
                     </div>
                     <div class="isi-bio">
                       <span>Tanggal Lahir</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="birtday" value="Tanggal lahir User">
+                        <input class="input_bio" type="text" name="" id="birtday" value="<?php echo $user_data['ttl'] ?>" placeholder="Tanggal lahir User">
                       </div>
                     </div>
                     <div class="isi-bio">
                       <span>Jenis Kelamin</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="gender" value="-">
+                        <input class="input_bio" type="text" name="" id="gender" value="<?php echo $user_data['gender'] ?>">
                       </div>
                     </div>
                   </div>
@@ -97,15 +115,21 @@
                     <div class="isi-bio">
                       <span>Email</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="email" value="Email User">
+                        <input class="input_bio" type="text" name="" id="email" value="<?php echo $user_data['email'] ?>">
                       </div>
                     </div>
                     <div class="isi-bio">
                       <span>Username</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="username" value="Username User">
+                        <input class="input_bio" type="text" name="" id="username" value="<?php echo $user_data['username'] ?>">
                       </div>
                     </div>
+                    <div class="isi-bio">
+                      <div class="isi">
+                        <button class="input_bio" type="submit" name="submit" id="password" style="background-color: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 5px;">
+                            Simpan Perubahan    
+                        </button>
+                      </div>
                   </div>
                   <div class="kids_box" style="padding-top: 30px">
                     <h3>Family Share</h3>

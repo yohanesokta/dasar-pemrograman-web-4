@@ -13,7 +13,7 @@
 }
 .kontainer-profil{
     width: 1200px;
-    height: 650px;
+    height: max-content;
     display: flex;  
     border: 1px var(--card-foreground) solid;
     border-radius: 10px;
