@@ -1,3 +1,7 @@
+<?php 
+require("../../../models/auth/register.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,12 +19,17 @@
   </head>
   <body class="dark">
     <div class="posisi">
-      <div class="kontainer">
+      <form action="" method="post" class="kontainer">
         <span class="judul">Sign Up</span>
         <p>
           Create your account to get started and enjoy all the features we
           offer.
         </p>
+        <?php if ($response['errors'] && $is_active) : ?>
+          <span style="color:red;" class="error-message">
+            <?= $response['message'] ?>
+          </span>
+        <?php endif; ?>
         <div class="box_isi">
           <label for="username">Username</label>
           <input type="text" name="username" id="username" class="input-box" />
@@ -62,7 +71,7 @@
             >
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </body>
 </html>

@@ -1,3 +1,7 @@
+<?php
+    require("../../../models/auth/login.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +19,14 @@
         <div class="kontainer">
             <span class="judul">Login</span>
             <p>Welcome back! Please sign in to continue to your account.</p>
-            <div class="box_isi">
+            <?php if ($response['errors'] && $is_active) : ?>
+                <span style="color:red;" class="error-message"><?= $response['message'] ?></span>
+            <?php endif; ?>
+            <form action="" method="post" class="box_isi">
                 <label for="username">Username</label><br>
-                <input type="text" name="username" id="username" class="input-box" placeholder="Username"><br>
+                <input required type="text" name="username" id="username" class="input-box" placeholder="Username"><br>
                 <label for="password">Password</label><br>
-                <input type="password" name="password" id="password" class="input-box" placeholder="***********">
+                <input required type="password" name="password" id="password" class="input-box" placeholder="***********">
                 <button id="login" class="button-01">LOGIN</button>
                 <div class="g-container">
                     <a
@@ -32,7 +39,7 @@
                 <div class="footer">
                     <span>Don't have an account?<a href="../register/index.html">Sign up</a></span>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </body>
