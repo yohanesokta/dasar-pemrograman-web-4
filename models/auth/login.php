@@ -35,7 +35,7 @@ if (
 
                 $response['errors'] = false;
                 $response['message'] = "Login berhasil!";
-                $new_token = generateJWT(); 
+                $new_token = generateJWT($user_data['username'],$user_data['name']); 
 
                 $update_token_sql = "UPDATE users SET tokens = ? WHERE username = ?";
                 $stmt_update = $conn->prepare($update_token_sql);
@@ -46,6 +46,8 @@ if (
                     $stmt_update->bind_param("ss", $new_token, $username);
                     if ($stmt_update->execute()) {
                         // Token berhasil diperbarui
+                        echo "hello";
+                        redirect_url("");
                         setcookie("token", $new_token, time() + (86400 * 30), "/");
                     } else {
                         $response['errors'] = true;

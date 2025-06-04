@@ -37,7 +37,7 @@
                     >
                 </div>
                 <div class="footer">
-                    <span>Don't have an account?<a href="../register/index.html">Sign up</a></span>
+                    <span>Don't have an account?<a href="../register">Sign up</a></span>
                 </div>
             </form>
         </div>

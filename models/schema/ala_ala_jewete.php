@@ -1,13 +1,21 @@
 <?php
-function generateJWT(){
-    // This function generates a JWT token for demonstration purposes.
-    // In a real application, you should use a library to handle JWT creation and validation.
-    // This is a simple example and does not include error handling or validation.
-    $header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
-    $payload = json_encode(['iss' => 'contoh aja', 'exp' => time() + 3600, 'sub' => time()]);
-    $base64UrlHeader = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($header));
-    $base64UrlPayload = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($payload));
-    $signature = hash_hmac('sha256', "$base64UrlHeader.$base64UrlPayload", 'your-secret-key', true);
-    $base64UrlSignature = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($signature));
-    return "$base64UrlHeader.$base64UrlPayload.$base64UrlSignature";
+function generateJWT($username,$name): string {
+
+    return  base64_encode($username). "." .base64_encode($name);
 }
+
+function verifyJWT($token): ?array {
+    $parts = explode('.', $token);
+    if (count($parts) !== 2) {
+        return null; // Invalid token format
+    }
+
+    $username = base64_decode($parts[0]);
+    $name = base64_decode($parts[1]);
+
+    return [
+        'username' => $username,
+        'name' => $name,
+    ];
+}
+    

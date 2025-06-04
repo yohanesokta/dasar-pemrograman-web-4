@@ -27,7 +27,6 @@ if (
             $response['message'] = 'Username sudah pernah dipakai.';
         } else {
             $hashed_password = password_hash($password_plain, PASSWORD_DEFAULT);
-            $create_token = generateJWT();
             if ($hashed_password === false) {
                 $response['errors'] = true;
                 $response['message'] = 'Gagal melakukan hashing password.';
@@ -41,6 +40,7 @@ if (
                     if ($sql_insert_user->execute()) {
                         $response["errors"] = false;
                         $response['message'] = "Registrasi berhasil!";
+                        $create_token = generateJWT($username,$name);
                         setcookie("token", $create_token, time() + (86400 * 30), "/");
                     } else {
                         $response['errors'] = true;

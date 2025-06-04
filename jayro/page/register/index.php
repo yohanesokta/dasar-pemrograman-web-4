@@ -56,7 +56,7 @@ require("../../../models/auth/register.php");
           <button id="sign_up" class="button-01">REGISTER</button>
           <div class="g-container">
             <a
-              href="https://courseapi.yohancloud.biz.id/auth/google?redirect=http://127.0.0.1:5500/jayro/page/profil%20user/index.html"
+              href="https://courseapi.yohancloud.biz.id/auth/google?redirect=<?php echo 'localhost/dasar-pemrograman-web-4/models/auth/google_callback.php' ?>" 
               id="google"
               class="button-02" 
               >Sign in with Google</a
@@ -65,7 +65,7 @@ require("../../../models/auth/register.php");
           <div class="footer">
             <span
               >You have account?<a
-                href="../login/index.html"
+                href="../login"
                 >Sign in</a
               ></span
             >
