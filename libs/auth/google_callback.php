@@ -22,10 +22,7 @@
                 $result = $stmt->get_result();
                 $new_token = generateJWT($username, $name);
                 if ($result->num_rows > 0) {
-                    
                     $user_data = $result->fetch_assoc();
-                    
-                    
                     $update_sql = "UPDATE users SET tokens = ? WHERE username = ?";
                     $update_stmt = $conn->prepare($update_sql);
                     if ($update_stmt) {
