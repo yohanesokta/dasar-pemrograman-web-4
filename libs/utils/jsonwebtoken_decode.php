@@ -1,5 +1,4 @@
 <?php
-
 function base64UrlDecode(string $data): ?string
 {
     $urlUnsafeData = str_replace(['-', '_'], ['+', '/'], $data);
@@ -41,4 +40,3 @@ function manualJwtDecode(string $jwt): ?array
         'payload' => $payload,
         'signature' => $encodedSignature 
     ];
-}
