@@ -5,7 +5,6 @@ function base64UrlDecode(string $data): ?string
     $paddedData = str_pad($urlUnsafeData, strlen($urlUnsafeData) % 4, '=', STR_PAD_RIGHT);
     return base64_decode($paddedData);
 }
-
 function manualJwtDecode(string $jwt): ?array
 {
     $parts = explode('.', $jwt);
@@ -41,4 +40,3 @@ function manualJwtDecode(string $jwt): ?array
         'payload' => $payload,
         'signature' => $encodedSignature 
     ];
-}

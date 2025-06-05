@@ -2,7 +2,6 @@
 
     require_once(__DIR__."/../index.php");
     
-
     $is_edited = false;
     $response = array("errors" => false, "message" => "");
 
@@ -26,7 +25,8 @@
                 $response["message"] = "Gagal memperbarui profil. Silakan coba lagi.";
              }
              $update_stmt->close();
-        }
-    } 
+        }       
+    }
+
 
 ?>
