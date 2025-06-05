@@ -1,5 +1,6 @@
 <?php
-  require("../../../libs/auth/middleware.php")
+  require("../../../libs/auth/middleware.php");
+  require("../../../libs/users/profiles.php");
 ?>
 
 <!DOCTYPE html>

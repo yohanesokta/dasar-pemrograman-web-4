@@ -1,5 +1,8 @@
-<?php 
-    require(__DIR__."/../index.php");
+<?php
+
+    require_once(__DIR__."/../index.php");
+    
+
     $is_edited = false;
     $response = array("errors" => false, "message" => "");
 
@@ -24,7 +27,6 @@
              }
              $update_stmt->close();
         }
-       
-    }
+    } 
 
 ?>
