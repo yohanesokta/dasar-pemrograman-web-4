@@ -1,11 +1,11 @@
 <?php
-
 function base64UrlDecode(string $data): ?string
 {
     $urlUnsafeData = str_replace(['-', '_'], ['+', '/'], $data);
     $paddedData = str_pad($urlUnsafeData, strlen($urlUnsafeData) % 4, '=', STR_PAD_RIGHT);
     return base64_decode($paddedData);
 }
+
 function manualJwtDecode(string $jwt): ?array
 {
     $parts = explode('.', $jwt);

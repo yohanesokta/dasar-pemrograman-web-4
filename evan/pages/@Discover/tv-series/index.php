@@ -32,7 +32,7 @@
             <button class="button button_outline">
               <i class="fa-regular fa-bell"></i>
             </button>
-<?php 
+            <?php 
                 if ($is_login) {
             ?>
             <a href="<?php echo $app_url; ?>/jayro/page/profil user/" class="button button_primary">
