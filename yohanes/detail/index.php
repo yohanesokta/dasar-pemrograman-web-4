@@ -1,85 +1,61 @@
+<?php 
+    include('../../libs/auth/middleware.php');
+?>
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nonton.aja | Home</title>
+    <title>nonton.aja</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-      
     <link rel="stylesheet" href="../../evan/css/preflight.css" />
     <link rel="stylesheet" href="../../evan/css/utils.css" />
     <link rel="stylesheet" href="../../evan/css/components.css" />
-    <link rel="stylesheet" href="../styles/compile/layout-old.css" />
-    <link rel="stylesheet" href="../styles/themes.css">
+    <link rel="stylesheet" href="../../evan/css/layout.css" />
+
     <link rel="stylesheet" href="../styles/detail.css">
+
   </head>
   <body>
     <div class="grid_layout">
-      <header>
-        <div class="header_flex container">
-          <a href="" class="brand_logo"><span>nonton</span>.aja</a>
-          <form action="" method="post" class="header_search">
-            <label for="search_film">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input
-                type="text"
-                name="search_film"
-                placeholder="Search movie" />
-            </label>
-          </form>
+      <header id="header">
+        <div class="container">
+          <a href="http://127.0.0.1:5500/evan/pages/home/index.html" class="brand_logo"><span>nonton</span>.aja</a>
+          <button type="button" id="button_search" class="button button_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Seacrh Movie
+          </button>
           <div class="header_cta">
-            <button class="button_ghost">Get Premium</button>
-            <button class="button_outline">
+            <button class="button button_ghost">Get Premium</button>
+            <button class="button button_outline">
               <i class="fa-regular fa-bell"></i>
             </button>
-            <button class="button">
+            <?php 
+                if ($is_login) {
+            ?>
+            <a href="./jayro/page/profil user/" class="button button_primary">
+                <p style="color:white;"><?php  echo $user_data['username']; ?></p>
               <i class="fa-solid fa-user"></i>
-            </button>
+            </a>
+
+            <?php } else { ?>
+                <a href="./jayro/page/login" class="button button_primary">
+                    Login
+                </a>
+
+                <a href="./jayro/page/register" class="button button_primary">
+                    Register
+                </a>
+            <?php  }?>
           </div>
         </div>
       </header>
-      <aside>
-        <section>
-          <h4>You</h4>
-          <ul>
-            <li class="button_ghost">
-              <i class="fa-solid fa-clock-rotate-left"></i>History
-            </li>
-            <li class="button_ghost">
-              <i class="fa-solid fa-thumbs-up"></i>Favorite Movies
-            </li>
-            <li class="button_ghost">
-              <i class="fa-solid fa-thumbs-up"></i> Share Family
-            </li>
-            <li class="button_ghost">
-              <i class="fa-solid fa-clock"></i> Watch Later
-            </li>
-            <li class="button_ghost">
-              <i class="fa-solid fa-download"></i> Downloads
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h4>Explore Genres</h4>
-          <ul>
-            <li class="button_ghost">Action</li>
-            <li class="button_ghost">Comedy</li>
-            <li class="button_ghost">Horror</li>
-            <li class="button_ghost">Science Fiction</li>
-            <li class="button_ghost">K-Drama</li>
-          </ul>
-        </section>
-        <section>
-          <h4>More</h4>
-          <ul>
-            <li class="button_ghost">Kids Mode</li>
-          </ul>
-        </section>
+      <aside id="sidebar">
       </aside>
       <div class="content">
         <main>
@@ -123,34 +99,23 @@
                 </ul>
             </div>
         </main>
-        <footer>
-          <section>
-            <span href="" class="brand_logo"><span>nonton</span>.aja</span>
-            <span>&copy; 2025 nonton.aja</span>
-          </section>
-          <section>
-            <h4>Explore Premium</h4>
-            <ul>
-              <li>Premium Individual</li>
-              <li>Premium Duo</li>
-              <li>Premium Family</li>
-              <li>Premium Student</li>
-            </ul>
-          </section>
-          <section>
-            <h4>Developers</h4>
-            <ul>
-              <li>Yohanes Oktanio</li>
-              <li>Evan Rafa Radya Alifian</li>
-              <li>Fitria Cahaya Kurnia</li>
-              <li>Rachelia Andini Tendean</li>
-              <li>Muhamad Jayro Fadil Mukolip</li>
-              <li>Angga Pratama</li>
-            </ul>
-          </section>
+        <footer id="footer">
+          <p id="copyright">&copy; 2025 nonton.aja</p>
+          <div id="themes">
+            <span>Themes:</span>
+            <div id="theme_toggles">
+              <button type="button" class="button button_ghost"><i class="fa-solid fa-sun"></i></button>
+              <button type="button" class="button button_ghost"><i class="fa-solid fa-moon"></i></button>
+            </div>
+          </div>
         </footer>
       </div>
     </div>
+
+    <script type="module" src="../../evan/js/layout-dom.js"></script>
+    <script type="module" src="../../evan/js/create-elements/theme_toggle.js"></script>
   </body>
 </html>
+
+
 
