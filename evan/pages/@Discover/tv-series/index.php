@@ -1,3 +1,6 @@
+<?php
+  require_once("../../../../libs/auth/middleware.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,9 +32,23 @@
             <button class="button button_outline">
               <i class="fa-regular fa-bell"></i>
             </button>
-            <button class="button button_primary">
+            <?php 
+                if ($is_login) {
+            ?>
+            <a href="<?php echo $app_url; ?>/jayro/page/profil user/" class="button button_primary">
+                <p style="color:white;"><?php  echo $user_data['username']; ?></p>
               <i class="fa-solid fa-user"></i>
-            </button>
+            </a>
+
+            <?php } else { ?>
+                <a href="<?php echo $app_url; ?>/jayro/page/login" class="button button_primary">
+                    Login
+                </a>
+
+                <a href="<?php echo $app_url; ?>/jayro/page/register" class="button button_primary">
+                    Register
+                </a>
+            <?php  }?>
           </div>
         </div>
       </header>

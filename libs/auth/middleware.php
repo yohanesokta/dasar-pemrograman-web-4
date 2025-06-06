@@ -1,6 +1,6 @@
 <?php 
     require(__DIR__."/../index.php");
-    require(__DIR__."/../schema/ala_ala_jewete.php");
+    require(__DIR__."/../utils/token_manual.php");
 
     $is_login = false;
     $user_data = null;
