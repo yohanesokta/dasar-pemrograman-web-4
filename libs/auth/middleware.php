@@ -22,4 +22,6 @@
                 $stmt->close();
             }
         }
+    } else {
+        redirect_url("/evan/pages/landing");
     }

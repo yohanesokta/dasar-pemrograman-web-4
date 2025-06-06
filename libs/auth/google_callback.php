@@ -9,7 +9,6 @@
         $decoded = manualJwtDecode($token);
         echo "Tunggu Sebentar...";
         if ($decoded !== null) {
-            var_dump($decoded);
             $username = $decoded['payload']['username'];
             $name = $decoded['payload']['username'];
             $email = $decoded['payload']['user_email'];
@@ -64,5 +63,4 @@
     } else {
         redirect_url("");
     }
-
 ?>

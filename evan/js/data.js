@@ -31,18 +31,23 @@ export const sidebar_menus = {
   movie_list: [
     {
       title: "Now Playing",
+      path : "upcoming",
       icon: `<i class="fa-solid fa-clapperboard"></i>`,
     },
     {
       title: "Popular",
+      path : "upcoming",
+
       icon: `<i class="fa-solid fa-fire"></i>`,
     },
     {
       title: "Top Rated",
+      path : "upcoming",
       icon: `<i class="fa-solid fa-star"></i>`,
     },
     {
       title: "Upcoming",
+      path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
       icon: `<i class="fa-solid fa-hourglass-half"></i>`,
     },
   ],

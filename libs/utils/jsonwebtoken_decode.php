@@ -40,3 +40,4 @@ function manualJwtDecode(string $jwt): ?array
         'payload' => $payload,
         'signature' => $encodedSignature 
     ];
+}
