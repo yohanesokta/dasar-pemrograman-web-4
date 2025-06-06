@@ -6,7 +6,6 @@ include(__DIR__."/../utils/token_manual.php");
 $response = array("errors" => false, "message" => ""); 
 $is_active = false;
 
-
 if (
     isset($_POST['username'], $_POST['password']) &&
     !empty(trim($_POST['username'])) &&

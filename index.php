@@ -1,5 +1,5 @@
 <?php 
-    include('./models/auth/middleware.php');
+    include('./libs/auth/middleware.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,5 +1,6 @@
 <?php
-  require("../../../models/auth/middleware.php")
+  require("../../../libs/auth/middleware.php");
+  require("../../../libs/users/profiles.php");
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +84,7 @@
                     <a href="../change Password/index.html">Change Password</a>
                   </div>
                   <div class="button-04">
-                    <a href="../../../models/auth/logout.php">Log out</a>
+                    <a href="../../../libs/auth/logout.php">Log out</a>
                   </div>
                 </div>
               </div>
