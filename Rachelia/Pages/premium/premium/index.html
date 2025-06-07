@@ -10,11 +10,11 @@
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/Rachelia/css/navigasi/css/preflight.css" />
-    <link rel="stylesheet" href="/Rachelia/css/navigasi/css/utils.css" />
-    <link rel="stylesheet" href="/Rachelia/css/navigasi/css/components.css" />
-    <link rel="stylesheet" href="/Rachelia/css/navigasi/css/layout.css" />
-    <link rel="stylesheet" href="/Rachelia/css/premium/premium/pembelian.css">
+      <link rel="stylesheet" href="../../../css/premium/premium/pembelian.css">
+    <link rel="stylesheet" href="../../../css/navigasi/css/preflight.css" />
+    <link rel="stylesheet" href="../../../css/navigasi/css/utils.css" />
+    <link rel="stylesheet" href="../../../css/navigasi/css/components.css" />
+    <link rel="stylesheet" href="../../../css/navigasi/css/layout.css" />
   </head>
   <body>
     <div class="grid_layout">
@@ -40,6 +40,7 @@
       </aside>
       <div class="content">
         <main id="main">
+          <div id="premium"></div>
             <h1 class="judulPremium">Premium</h1>
             <p class="paragraf">Gabung ke premium dan saksikan film sepuasmu!!!</p>
             <div class="isiprem">
@@ -101,7 +102,7 @@
                 function pilihPaket(paket, harga) {
                     localStorage.setItem('selectedPaket', paket);  
                     localStorage.setItem('selectedHarga', harga); 
-                    window.location.href = '/Rachelia/Pages/premium/konfirmasi/pilihpaket.html';  
+                    window.location.href = '../../../Pages/premium/konfirmasi/pilihpaket.html';  
                 }
             </script>
         </main>
@@ -118,8 +119,7 @@
       </div>
     </div>
 
-    <script type="module" src="/Rachelia/js/navigasi/layout-dom.js"></script>
-    <script type="module" src="/Rachelia/js/navigasi/create-elements/theme_toggle.js"></script>
-    <script type="module" src="./js/create-elements/generate-home-content.js"></script>
+    <script type="module" src="../../../js/navigasi/layout-dom.js"></script>
+    <script type="module" src="../../../js/navigasi/create-elements/theme_toggle.js"></script>
   </body>
 </html>
