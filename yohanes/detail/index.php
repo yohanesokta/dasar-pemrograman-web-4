@@ -65,6 +65,7 @@
                     <a href="../trailers?id=<?php echo $_GET['id']?>" class="buy">
                         <button>Play Trailers</button>
                     </a>
+
                     <div class="buy">
                         <button>Play Now</button>
                     </div>
