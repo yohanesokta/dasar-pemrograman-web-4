@@ -25,3 +25,24 @@
     } else {
         redirect_url("/evan/pages/landing");
     }
+
+    function deletePremium() {
+        global $user_data;
+        $stmt = "UPDATE users SET premium = 0, expire_premium = NULL WHERE id = ?";
+        $stmt = $GLOBALS['conn']->prepare($stmt);
+        $stmt->bind_param("i", $user_data['id']);
+        $stmt->execute();
+        $stmt->close();
+    }
+    function verifPremium() {
+        global $user_data;
+        if ($user_data['premium'] == 1) {
+            $time_now = new DateTime();
+            $time_expire = new DateTime($user_data['expire_premium']);
+            if ($time_now > $time_expire) {
+                deletePremium(); 
+            }
+            return true;
+        }
+        deletePremium();
+    }

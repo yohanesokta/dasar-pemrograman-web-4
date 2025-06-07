@@ -1,3 +1,8 @@
+<?php
+  require_once("../../../../libs/auth/middleware.php");
+  require_once("../../../../libs/users/premium_buy.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,13 +31,28 @@
             Seacrh Movie
           </button>
           <div class="header_cta">
-            <button class="button button_ghost">Get Premium</button>
-            <button class="button button_outline">
-              <i class="fa-regular fa-bell"></i>
-            </button>
-            <button class="button button_primary">
+            <?php 
+                if ($is_login) {
+            ?>
+            <?php 
+                if ($user_data["premium"] == 0) {
+            ?>
+            <button id="getprem" class="button button_ghost">Get Premium</button>
+            <?php } ?>
+            <a href="../../../../jayro/page/profil user/" class="button button_primary">
+                <p style="color:white;"><?php  echo $user_data['username']; ?></p>
               <i class="fa-solid fa-user"></i>
-            </button>
+            </a>
+
+            <?php } else { ?>
+                <a href="./jayro/page/login" class="button button_primary">
+                    Login
+                </a>
+
+                <a href="./jayro/page/register" class="button button_primary">
+                    Register
+                </a>
+            <?php  }?>
           </div>
         </div>
       </header>
@@ -43,7 +63,7 @@
         <div class="isicontent">
             <img src="../../../Pages/review film/kirim ulasan/centang.png" alt="emoji">
             <p class="paragraf">Pembayaran Berhasil !! </p>
-            <button class="menuutama">Kembali ke menu utama</button>
+            <a href="../../../../" class="menuutama">Kembali ke menu utama</a>
         </div>
         </main>
         <footer id="footer">
@@ -59,8 +79,8 @@
       </div>
     </div>
 
-    <script type="module" src="../../../js/navigasi/layout-dom.js"></script>
-    <script type="module" src="../../../js/navigasi/create-elements/theme_toggle.js"></script>
+    <script type="module" src="../../../../evan/js/layout-dom.js"></script>
+    <script type="module" src="../../../../evan/js/create-elements/theme_toggle.js"></script>
     <script type="module" src="./js/create-elements/generate-home-content.js"></script>
   </body>
 </html>

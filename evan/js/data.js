@@ -5,6 +5,14 @@ const brand_logo = document.querySelector(".brand_logo");
 brand_logo.href = config["APP_URL "];
 console.log(brand_logo)
 
+const prem = document.querySelector("#getprem")
+if (prem) {
+
+  prem.addEventListener("click", () => {
+    window.location.href = config["APP_URL "] + "/Rachelia/Pages/premium/premium/";
+  })
+}
+
 export const sidebar_menus = {
   you: [
     {
