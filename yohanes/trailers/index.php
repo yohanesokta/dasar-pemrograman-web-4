@@ -59,43 +59,13 @@
       </aside>
       <div class="content">
         <main>
-            <div class="detail">
-                <img src="../assets/minecraft.jpg" id="image_thumbnail" alt="">
-                <div class="bottom-info">
-                    <a href="../trailers?id=<?php echo $_GET['id']?>" class="buy">
-                        <button>Play Trailers</button>
-                    </a>
+          <div class="trailers-container">
+            <h1>Trailers</h1>
+            <div class="video-player" id="video-player">
+                
+           </div>
+          </div>
 
-                    <div class="buy">
-                        <button>Play Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="deskripsi">
-                <h1 id="title_movie">Minecraft Movie</h1>
-                <div class="menu">
-                    <button class="active">Overview</button>
-                    <button>More Like This</button>
-                    <button>Details</button>
-                </div>
-                <ul>
-                    <li>
-                        <p id="overview">A Minecraft Movie adalah sebuah film komedi, petualangan, dan fantasi dari Amerika yang dirilis pada tahun 2025 yang didasarkan oleh sebuah video game dari tahun 2011 bernama Minecraft, oleh Mojang Studios</p>
-                    </li>
-                    <li>
-                        <span id="release">Tanggal rilis: 9 April 2025</span>
-                    </li>
-                    <li>
-                        <span>Sutradara: Jared Hess</span>
-                    </li>
-                    <li>
-                        <span id="lang">Bahasa: Inggris</span>
-                    </li>
-                    <li>
-                        <span id="status">Status : Release</span>
-                    </li>
-                </ul>
-            </div>
         </main>
         <footer id="footer">
           <p id="copyright">&copy; 2025 nonton.aja</p>
@@ -114,18 +84,13 @@
     <script type="module" src="../../evan/js/create-elements/theme_toggle.js"></script>
     <script>
       const body = document.querySelector('main');
-      const image_thumbnail = document.querySelector('#image_thumbnail');
-      const overview = document.querySelector('#overview');
-      const release = document.querySelector('#release');
-      const lang = document.querySelector('#lang');
-      const status = document.querySelector('#status');
-      const title_movie = document.querySelector('#title_movie');
+      const videoPlayer = document.getElementById('video-player');
       body.style.display = 'none';
 
       const id = "<?php echo $_GET['id'];?>"
       const url = ""
 
-      fetch(`https://api.themoviedb.org/3/movie/${id}`,{
+      fetch(`https://api.themoviedb.org/3/movie/${id}/trailers`,{
         headers : {
           accept: "application/json",
       Authorization:
@@ -134,14 +99,11 @@
       }).then((event) => event.json()).then((data) => {
         console.log(data)
         body.style.display = 'block';
-        overview.innerHTML = data.overview;
-        release.innerHTML = `Tanggal rilis: ${data.release_date}`;
-        lang.innerHTML = `Bahasa: ${data.original_language}`;
-        status.innerHTML = `Status: ${data.status}`;
-        title_movie.innerHTML = data.title;
-        image_thumbnail.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
+        videoPlayer.innerHTML = `<iframe allow="autoplay; encrypted-media" autoplay="true" style="width:100%; height:80vh;" src="https://www.youtube.com/embed/${data.youtube[0].source}?autoplay=1&si=b3EIjtPyCnHGWpn8&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
       })
 
     </script>
   </body>
 </html>
+
+
