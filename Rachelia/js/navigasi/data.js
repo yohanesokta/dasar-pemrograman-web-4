@@ -1,10 +1,3 @@
-import { config } from "../../app_config.js";
-
-const brand_logo = document.querySelector(".brand_logo");
-
-brand_logo.href = config["APP_URL "];
-console.log(brand_logo)
-
 export const sidebar_menus = {
   you: [
     {
@@ -31,34 +24,29 @@ export const sidebar_menus = {
   movie_list: [
     {
       title: "Now Playing",
-      path : "upcoming",
       icon: `<i class="fa-solid fa-clapperboard"></i>`,
     },
     {
       title: "Popular",
-      path : "upcoming",
-
       icon: `<i class="fa-solid fa-fire"></i>`,
     },
     {
       title: "Top Rated",
-      path : "upcoming",
       icon: `<i class="fa-solid fa-star"></i>`,
     },
     {
       title: "Upcoming",
-      path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
       icon: `<i class="fa-solid fa-hourglass-half"></i>`,
     },
   ],
   discover: [
     {
       name: "Movies",
-      path: config["APP_URL "] + "/evan/pages/@Discover/movie",
+      path: "/evan/pages/@Discover/movie/index.html",
     },
     {
       name: "TV / Series",
-      path: config["APP_URL "] + "/evan/pages/@Discover/tv-series",
+      path: "/evan/pages/@Discover/tv-series/index.html",
     },
   ],
   trending: ["All", "Movies", "People", "TV / Series"],

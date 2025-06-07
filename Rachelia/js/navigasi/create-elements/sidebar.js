@@ -22,7 +22,7 @@ export default function Sidebar() {
         ${sidebar_menus.movie_list
           .map(
             (d) =>
-              `<a href="${d.path}" class="button button_ghost">${d.icon}${d.title}</a>`
+              `<a href="" class="button button_ghost">${d.icon}${d.title}</a>`
           )
           .join("")}
       </div>
