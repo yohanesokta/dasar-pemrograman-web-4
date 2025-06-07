@@ -38,7 +38,7 @@
             <?php 
                 if ($is_login) {
             ?>
-            <a href="./jayro/page/profil user/" class="button button_primary">
+            <a href="../../jayro/page/profil user/" class="button button_primary">
                 <p style="color:white;"><?php  echo $user_data['username']; ?></p>
               <i class="fa-solid fa-user"></i>
             </a>
@@ -60,21 +60,18 @@
       <div class="content">
         <main>
             <div class="detail">
-                <img src="../assets/minecraft.jpg" alt="">
-                <div class="logo">
-                    <img src="../assets/mojang.logo.png" alt="">
-                </div>
+                <img src="../assets/minecraft.jpg" id="image_thumbnail" alt="">
                 <div class="bottom-info">
                     <div class="buy">
-                        <button>Play Now</button>
+                        <button>Play Trailers</button>
                     </div>
-                    <div class="simple-info">
-                        A Minecraft Movie adalah sebuah film komedi, petualangan, dan fantasi dari Amerika yang dirilis pada tahun 2025 yang didasarkan oleh sebuah video game dari tahun 2011 bernama Minecraft, oleh Mojang Studios.
+                    <div class="buy">
+                        <button>Play Now</button>
                     </div>
                 </div>
             </div>
             <div class="deskripsi">
-                <h1>Minecraft Movie</h1>
+                <h1 id="title_movie">Minecraft Movie</h1>
                 <div class="menu">
                     <button class="active">Overview</button>
                     <button>More Like This</button>
@@ -82,19 +79,19 @@
                 </div>
                 <ul>
                     <li>
-                        <p>A Minecraft Movie adalah sebuah film komedi, petualangan, dan fantasi dari Amerika yang dirilis pada tahun 2025 yang didasarkan oleh sebuah video game dari tahun 2011 bernama Minecraft, oleh Mojang Studios</p>
+                        <p id="overview">A Minecraft Movie adalah sebuah film komedi, petualangan, dan fantasi dari Amerika yang dirilis pada tahun 2025 yang didasarkan oleh sebuah video game dari tahun 2011 bernama Minecraft, oleh Mojang Studios</p>
                     </li>
                     <li>
-                        <span>Tanggal rilis: 9 April 2025</span>
+                        <span id="release">Tanggal rilis: 9 April 2025</span>
                     </li>
                     <li>
                         <span>Sutradara: Jared Hess</span>
                     </li>
                     <li>
-                        <span>Bahasa: Inggris</span>
+                        <span id="lang">Bahasa: Inggris</span>
                     </li>
                     <li>
-                        <span>Perusahaan produksi: Warner Bros. Pictures; Legendary Pictures; Vertigo Entertainment; On the Roam; Mojang Studios</span>
+                        <span id="status">Status : Release</span>
                     </li>
                 </ul>
             </div>
@@ -114,6 +111,37 @@
 
     <script type="module" src="../../evan/js/layout-dom.js"></script>
     <script type="module" src="../../evan/js/create-elements/theme_toggle.js"></script>
+    <script>
+      const body = document.querySelector('main');
+      const image_thumbnail = document.querySelector('#image_thumbnail');
+      const overview = document.querySelector('#overview');
+      const release = document.querySelector('#release');
+      const lang = document.querySelector('#lang');
+      const status = document.querySelector('#status');
+      const title_movie = document.querySelector('#title_movie');
+      body.style.display = 'none';
+
+      const id = "<?php echo $_GET['id'];?>"
+      const url = ""
+
+      fetch(`https://api.themoviedb.org/3/movie/${id}`,{
+        headers : {
+          accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMTFkZmEyNjQ4ZmM1OTk0MTZkY2M5ODMwYWZmM2IxMyIsIm5iZiI6MTc0ODE5NjQzOC4yMTEsInN1YiI6IjY4MzM1YzU2MTNiOTFhMzdjYTJiNzIyMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9kmTunFIeMecPRfDvSa9Lyfl3lZ9W0LhVDg4K1lc8aE",
+        }
+      }).then((event) => event.json()).then((data) => {
+        console.log(data)
+        body.style.display = 'block';
+        overview.innerHTML = data.overview;
+        release.innerHTML = `Tanggal rilis: ${data.release_date}`;
+        lang.innerHTML = `Bahasa: ${data.original_language}`;
+        status.innerHTML = `Status: ${data.status}`;
+        title_movie.innerHTML = data.title;
+        image_thumbnail.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
+      })
+
+    </script>
   </body>
 </html>
 
