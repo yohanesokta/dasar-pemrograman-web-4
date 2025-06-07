@@ -14,13 +14,16 @@
 
 .content{
     background-color: var(--background);
-    justify-content: flex-start;
 }
 
-.isiprem{
+.isiprem {
     display: flex;
     padding: 35px;
+    gap: 50px; 
+    justify-content: center; 
+    flex-wrap: wrap; 
 }
+
 
 .box{
     background-color: var(--secondary);
