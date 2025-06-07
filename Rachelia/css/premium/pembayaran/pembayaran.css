@@ -1,0 +1,55 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    min-height: 100vh;
+    position: relative;
+}
+
+.isicontent {
+    background-color: var(--secondary);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--border);
+    width: 500px;
+    height: auto;
+    border: 2px solid var(--foreground);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+label{
+    color: var(--foreground);
+}
+
+.pscan{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.pscan p{
+    color: var(--foreground);
+}
+
+.next {
+    background-color: var(--popover-foreground);
+    color: var(--muted);
+    border: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto;
+}
+
+.next:hover {
+    background-color: var(--sidebar-accent-foreground);
+}
