@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nonton.aja</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Rachelia/css/navigasi/css/preflight.css" />
+    <link rel="stylesheet" href="/Rachelia/css/navigasi/css/utils.css" />
+    <link rel="stylesheet" href="/Rachelia/css/navigasi/css/components.css" />
+    <link rel="stylesheet" href="/Rachelia/css/navigasi/css/layout.css" />
+    <link rel="stylesheet" href="/Rachelia/css/premium/premium/pembelian.css">
+  </head>
+  <body>
+    <div class="grid_layout">
+      <header id="header">
+        <div class="container">
+          <a href="http://127.0.0.1:5500/evan/pages/home/index.html" class="brand_logo"><span>nonton</span>.aja</a>
+          <button type="button" id="button_search" class="button button_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Seacrh Movie
+          </button>
+          <div class="header_cta">
+            <button class="button button_ghost">Get Premium</button>
+            <button class="button button_outline">
+              <i class="fa-regular fa-bell"></i>
+            </button>
+            <button class="button button_primary">
+              <i class="fa-solid fa-user"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+      <aside id="sidebar">
+      </aside>
+      <div class="content">
+        <main id="main">
+            <h1 class="judulPremium">Premium</h1>
+            <p class="paragraf">Gabung ke premium dan saksikan film sepuasmu!!!</p>
+            <div class="isiprem">
+                <div class="box">
+                    <div class="judul">
+                        <h4 class="hurufjudul">1 Bulan</h4>
+                    </div>
+                    <ul class="textlist">
+                        <li> Hanya Untuk 1 akun Premium.</li>
+                        <li> Batalkan Kapan Saja.</li>
+                    </ul>
+                    <h4 class="harga">Rp. 22.000</h4>
+                    <div class="boxpilih">
+                        <button type="button" onclick="pilihPaket('1 Bulan', 'Rp. 22.000')">Pilih Paket</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="judul">
+                        <h4 class="hurufjudul">3 Bulan</h4>
+                    </div>
+                    <ul class="textlist">
+                        <li> Hanya Untuk 1 akun Premium.</li>
+                        <li> Batalkan Kapan Saja.</li>
+                    </ul> 
+                    <h4 class="harga">Rp. 56.000</h4>
+                    <div class="boxpilih">
+                        <button type="button" onclick="pilihPaket('3 Bulan', 'Rp. 56.000')">Pilih Paket</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="judul">
+                        <h4 class="hurufjudul">1 Tahun</h4>
+                    </div>
+                    <ul class="textlist">
+                        <li> Hanya Untuk 1 akun Premium.</li>
+                        <li> Batalkan Kapan Saja.</li>
+                    </ul>
+                    <h4 class="harga">Rp. 242.000</h4>
+                    <div class="boxpilih">
+                        <button type="button" onclick="pilihPaket('1 Tahun', 'Rp. 242.000')">Pilih Paket</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="judul">
+                        <h4 class="hurufjudul">Family 1 Bulan</h4>
+                    </div>
+                    <ul class="textlist">
+                        <li> Sampai 4 akun Premium.</li>
+                        <li> Batalkan Kapan Saja.</li>
+                    </ul>
+                    <h4 class="harga">Rp. 62.000</h4>
+                    <div class="boxpilih">
+                        <button type="button" onclick="pilihPaket('Family 1 Bulan', 'Rp. 62.000')">Pilih Paket</button>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function pilihPaket(paket, harga) {
+                    localStorage.setItem('selectedPaket', paket);  
+                    localStorage.setItem('selectedHarga', harga); 
+                    window.location.href = '/Rachelia/Pages/premium/konfirmasi/pilihpaket.html';  
+                }
+            </script>
+        </main>
+        <footer id="footer">
+          <p id="copyright">&copy; 2025 nonton.aja</p>
+          <div id="themes">
+            <span>Themes:</span>
+            <div id="theme_toggles">
+              <button type="button" class="button button_ghost"><i class="fa-solid fa-sun"></i></button>
+              <button type="button" class="button button_ghost"><i class="fa-solid fa-moon"></i></button>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script type="module" src="/Rachelia/js/navigasi/layout-dom.js"></script>
+    <script type="module" src="/Rachelia/js/navigasi/create-elements/theme_toggle.js"></script>
+    <script type="module" src="./js/create-elements/generate-home-content.js"></script>
+  </body>
+</html>

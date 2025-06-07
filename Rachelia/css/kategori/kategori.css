@@ -1,0 +1,56 @@
+main{
+    display: flex;
+    align-items: center;     
+    min-height: 100vh;  
+}
+
+.film-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%; 
+}
+
+.film-box {
+    flex: 0 0 calc(20% - 10px); 
+    margin-bottom: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    background-color: var(--secondary);
+    padding: 5px; 
+    box-sizing: border-box; 
+}
+
+.film-box a {
+    display: block;
+    text-decoration: none;
+}
+
+.film-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px var(--popover-foreground);
+    transition: transform 0.3s ease;
+    padding: 5px; 
+    box-sizing: border-box;
+}
+
+.film-box p {
+    margin-top: 5px;
+    font-size: 18px;
+    color: var(--foreground);
+    font-weight: bold;
+}
+
+.film-box:hover {
+    transform: scale(1.03);
+}
+
+.film-box:hover img, .film-box:hover p {
+    transform: scale(1.03);
+}

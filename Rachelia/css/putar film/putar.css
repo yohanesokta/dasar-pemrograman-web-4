@@ -1,0 +1,15 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    min-height: 100vh;  
+}
+
+
+video {
+    width: 100%;
+    height: auto; 
+    background: var(--background);
+    display: block;
+    margin: 0; 
+}
