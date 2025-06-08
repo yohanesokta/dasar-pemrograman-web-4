@@ -78,7 +78,7 @@
                 </div>
                 <div class="box_button">
                   <div class="button-04">
-                    <a href="../Reset Password/index.html">Reset Kata Sandi</a>
+                    <a href="">Reset Kata Sandi</a>
                   </div>
                   <div class="button-04">
                     <a href="../change Password/index.html">Change Password</a>

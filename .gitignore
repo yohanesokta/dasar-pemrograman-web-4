@@ -1,4 +1,4 @@
 *.DStore
 .vscode
 vscode
-/Models/.env
+.env

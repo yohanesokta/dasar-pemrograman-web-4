@@ -1,3 +1,10 @@
+import { config } from "../../app_config.js";
+
+const brand_logo = document.querySelector(".brand_logo");
+
+brand_logo.href = config["APP_URL "];
+console.log(brand_logo)
+
 export const sidebar_menus = {
   you: [
     {
@@ -42,11 +49,11 @@ export const sidebar_menus = {
   discover: [
     {
       name: "Movies",
-      path: "/evan/pages/@Discover/movie/index.html",
+      path: config["APP_URL "] + "/evan/pages/@Discover/movie",
     },
     {
       name: "TV / Series",
-      path: "/evan/pages/@Discover/tv-series/index.html",
+      path: config["APP_URL "] + "/evan/pages/@Discover/tv-series",
     },
   ],
   trending: ["All", "Movies", "People", "TV / Series"],

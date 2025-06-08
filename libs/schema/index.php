@@ -9,6 +9,7 @@ $schema = "CREATE TABLE $db_database.`users` (
     `name` TEXT NULL DEFAULT NULL,
     `ttl` VARCHAR(255) NULL DEFAULT NULL,
     `tokens` VARCHAR(255) NULL DEFAULT '',
+    `gender` VARCHAR(255) NULL DEFAULT '',
     `premium` INT NULL DEFAULT '0',
     `update_premium` VARCHAR(255) NULL DEFAULT NULL,
     `expire_premium` VARCHAR(255) NULL DEFAULT NULL,
