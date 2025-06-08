@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: radial-gradient(circle at center, #222 0%, #000 90%);
+  color: #eee;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem 4rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  text-shadow: 0 0 10px rgba(255 255 255 / 0.2);
+}
+
+h2 {
+  font-weight: 400;
+  color: #aaa;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.carousel {
+  position: relative;
+  max-width: 640px;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Membuat tinggi proporsional */
+  border: 6px solid #444;
+  border-radius: 12px;
+  background: #111;
+  box-shadow: 0 0 20px 8px rgba(255,255,255,0.05);
+  overflow: hidden;
+}
+
+.carousel::before {
+  display: none; /* Matikan pseudo-border jika ada */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  user-select: none;
+  pointer-events: none;
+  position: relative;
+  border-radius: 0;
+  filter: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.caption {
+  position: absolute;
+  bottom: 12px;
+  left: 20px;
+  color: #ccc;
+  font-size: 1rem;
+  font-style: italic;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+button.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #111;
+  border: 2px solid #555;
+  color: #eee;
+  font-size: 2rem;
+  padding: 0.25rem 0.7rem 0 0.7rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.7);
+  z-index: 10;
+}
+button.nav-btn:hover {
+  background: #222;
+  border-color: #aaa;
+  color: #fff;
+  box-shadow: 0 0 10px #fff, 0 0 20px blueviolet;
+}
+
+button#prevBtn {
+  left: 8px;
+}
+button#nextBtn {
+  right: 8px;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+.dots {
+  margin: 1rem auto 0;
+  text-align: center;
+}
+.dot {
+  height: 14px;
+  width: 14px;
+  margin: 0 6px;
+  background: #444;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 0 8px 0 #222 inset;
+  transition: background-color 0.3s ease;
+}
+.dot.active {
+  background: #0ff;
+  box-shadow: 0 0 8px 2px #0ff;
+}
+.dot:hover {
+  background: #0ffaaaff;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  button.nav-btn {
+    font-size: 1.6rem;
+    padding: 0.1rem 0.4rem;
+  }
+}
