@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Photocast Film</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Photocast Film</h1>
+  <div class="carousel" aria-label="Photocast Film Carousel">
+    <div class="slides">
+      <div class="slide" aria-hidden="false">
+        <img src="https://media.gq.com/photos/590c8a5fee7e6447b1025be2/16:9/w_1280,c_limit/spiderman-3.jpg" alt="Vintage film camera close-up lens"/>
+      </div>
+      <div class="slide" aria-hidden="true">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzZ6V2TFAOrm0C0x0NkKlWsi7aKjI7KlisKQ&s" alt="Film reel on wooden table"/>
+      </div>
+      <div class="slide" aria-hidden="true">
+        <img src="https://play-lh.googleusercontent.com/proxy/iBwiOVaZnuwGHtKgNPC-oZpwZZKXaT_D_s8L95r9fy_s9CNPrREfWAqxsslILrsTlxMiA0vxyRj1OtzJvkJ8q3IGwF1EuzQx8nr4zGx2Gr2ZWFBUcQc=s3840-w3840-h2160" alt="Black and white vintage photo"/>
+      </div>
+      <div class="slide" aria-hidden="true">
+        <img src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/09/spider-man-3-thomas-haden-church-sandman.jpg" alt="Person holding a film camera"/>
+      </div>
+      <div class="slide" aria-hidden="true">
+        <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/11/Green-Goblin.jpg" alt="Close-up of vintage film negatives"/>
+      </div>
+    </div>
+
+    <button class="nav-btn" id="prevBtn" aria-label="Previous Slide">&#10094;</button>
+    <button class="nav-btn" id="nextBtn" aria-label="Next Slide">&#10095;</button>
+  </div>
+
+  <div class="dots" role="tablist" aria-label="Slide Navigation">
+    <span class="dot active" role="tab" aria-selected="true" tabindex="0" aria-controls="slide1" id="dot1"></span>
+    <span class="dot" role="tab" aria-selected="false" tabindex="-1" aria-controls="slide2" id="dot2"></span>
+    <span class="dot" role="tab" aria-selected="false" tabindex="-1" aria-controls="slide3" id="dot3"></span>
+    <span class="dot" role="tab" aria-selected="false" tabindex="-1" aria-controls="slide4" id="dot4"></span>
+    <span class="dot" role="tab" aria-selected="false" tabindex="-1" aria-controls="slide5" id="dot5"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
