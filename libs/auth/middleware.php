@@ -33,6 +33,7 @@
         $stmt->bind_param("i", $user_data['id']);
         $stmt->execute();
         $stmt->close();
+        redirect_url("/Rachelia/Pages/premium/premium");
     }
     function verifPremium() {
         global $user_data;

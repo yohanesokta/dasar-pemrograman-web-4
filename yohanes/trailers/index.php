@@ -62,7 +62,7 @@
       <div class="content">
         <main>
           <div class="trailers-container">
-            <h1>Trailers</h1>
+            <h1 style="padding:20px;">Trailers</h1>
             <div class="video-player" id="video-player">
                 
            </div>

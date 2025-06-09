@@ -68,9 +68,9 @@
                         <button>Play Trailers</button>
                     </a>
 
-                    <div class="buy">
+                    <a href="../../Rachelia/Pages/putar film/?id=<?php echo $_GET['id']?>" class="buy">
                         <button>Play Now</button>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="deskripsi">
