@@ -119,7 +119,7 @@
                     <div class="isi-bio">
                       <span>Email</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="email" value="<?php echo $user_data['email'] ?>" disabled>
+                        <input class="input_bio" type="text" name="" id="email" value="<?php echo $user_data['email'] ?>" disabled`>
                       </div>
                     </div>
                     <div class="isi-bio">
