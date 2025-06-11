@@ -20,8 +20,16 @@ $schema = "CREATE TABLE $db_database.`users` (
     `created_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 
+$schema2 = "CREATE TABLE $db_database. `history` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(255) NOT NULL,
+    `film_id` INT NOT NULL,
+    `film_name` VARCHAR(255) NOT NULL,
+    `film_thumbnail` VARCHAR(255) NOT NULL,
+    `update_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY (`ID`)) ENGINE = InnoDB";
 
-if ($conn->execute_query($schema) === TRUE) {
+if ( $conn->execute_query($schema2) && $conn->execute_query($schema2)) {
 echo "<h1> Table And Database Success Created! Dont Use Again </h1>";
 }
 else { 
