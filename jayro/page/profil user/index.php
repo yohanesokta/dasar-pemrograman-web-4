@@ -119,13 +119,13 @@
                     <div class="isi-bio">
                       <span>Email</span>
                       <div class="isi">
-                        <span id="email"><?php echo $user_data['email'] ?></span>
+                        <input class="input_bio" type="text" name="" id="email" value="<?php echo $user_data['email'] ?>" disabled>
                       </div>
                     </div>
                     <div class="isi-bio">
                       <span>Username</span>
                       <div class="isi">
-                        <span id="username"><?php echo $user_data['username'] ?></span>
+                        <input class="input_bio" type="text" name="" id="username" value="<?php echo $user_data['username'] ?>" disabled>
                       </div>
                     </div>
                     <div class="isi-bio">
