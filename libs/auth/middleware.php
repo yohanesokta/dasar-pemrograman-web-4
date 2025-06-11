@@ -28,8 +28,9 @@
 
     function deletePremium() {
         global $user_data;
+        global $conn;
         $stmt = "UPDATE users SET premium = 0, expire_premium = NULL WHERE id = ?";
-        $stmt = $GLOBALS['conn']->prepare($stmt);
+        $stmt = $conn->prepare($stmt);
         $stmt->bind_param("i", $user_data['id']);
         $stmt->execute();
         $stmt->close();

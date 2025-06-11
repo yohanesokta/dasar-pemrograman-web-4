@@ -1,3 +1,9 @@
+<?php
+    require_once("../../../libs/auth/middleware.php");
+    require_once("../../../libs/users/change_password.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +31,7 @@
                 <span>Anda mungkin logout dari akun Anda di beberapa perangkat. Pelajari lebih lanjut tempat Anda akan tetap login.</span>
             </div>
             <div class="sub_box">
-                <form action="post">
+                <form action="" method="post">
                     <div class="label-input">
                         <label for="prev_password">Password Lama</label>
                     </div>
@@ -41,6 +47,9 @@
                     <div class="g-box">
                         <input type="password" name="new_password" id="new_password">
                     </div>
+                    <?php if ($is_active)  {?>
+                    <p style="color:red;"><?php if($response['errors']) { echo $response['message'];} ?></p>
+                    <?php }?>
                     <div class="g-button">
                         <button type="submit" class="button-05">
                             <a href="">Ubah password</a>

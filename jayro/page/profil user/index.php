@@ -84,7 +84,7 @@
                     <a href="../Reset Password/index.html">Reset Kata Sandi</a>
                   </div>
                   <div class="button-04">
-                    <a href="../change Password/index.html">Change Password</a>
+                    <a href="../change Password">Change Password</a>
                   </div>
                   <div class="button-04">
                     <a href="../../../libs/auth/logout.php">Log out</a>
@@ -98,19 +98,19 @@
                     <div class="isi-bio">
                       <span>nama</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="nama" value="<?php echo $user_data['name'] ?>">
+                        <input class="input_bio" type="text" name="nama" id="nama" value="<?php echo $user_data['name'] ?>">
                       </div>
                     </div>
                     <div class="isi-bio">
                       <span>Tanggal Lahir</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="birtday" value="<?php echo $user_data['ttl'] ?>" placeholder="Tanggal lahir User">
+                        <input class="input_bio" type="text" name="birtday" id="birtday" value="<?php echo $user_data['ttl'] ?>" placeholder="Tanggal lahir User">
                       </div>
                     </div>
                     <div class="isi-bio">
                       <span>Jenis Kelamin</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="gender" value="<?php echo $user_data['gender'] ?>">
+                        <input class="input_bio" type="text" name="gender" id="gender" value="<?php echo $user_data['gender'] ?>">
                       </div>
                     </div>
                   </div>
@@ -119,15 +119,19 @@
                     <div class="isi-bio">
                       <span>Email</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="email" value="<?php echo $user_data['email'] ?>">
+                        <input class="input_bio" type="text" name="email" id="email" value="<?php echo $user_data['email'] ?>">
                       </div>
                     </div>
                     <div class="isi-bio">
                       <span>Username</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="username" value="<?php echo $user_data['username'] ?>">
+                        <input class="input_bio" type="text" name="username" id="username" value="<?php echo $user_data['username'] ?>">
                       </div>
                     </div>
+                    <?php if ($is_edited) { if ($response['errors']) {?>
+                    <p style="color:red">HELLO</p>
+
+                    <?php }}?>
                     <div class="isi-bio">
                       <div class="isi">
                         <button class="input_bio" type="submit" name="submit" id="password" style="background-color: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 5px;">
