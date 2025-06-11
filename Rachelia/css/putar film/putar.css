@@ -1,0 +1,17 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    min-height: 100vh;  
+}
+
+
+#video {
+    width: 100%;                
+    max-width: 100%;           
+    height: auto;               
+    aspect-ratio: 16 / 9;       
+    object-fit: cover;          
+    border-radius: 10px;        
+    box-shadow: 0 4px 12px var(--foreground);
+}

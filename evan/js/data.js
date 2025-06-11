@@ -5,6 +5,14 @@ const brand_logo = document.querySelector(".brand_logo");
 brand_logo.href = config["APP_URL "];
 console.log(brand_logo)
 
+const prem = document.querySelector("#getprem")
+if (prem) {
+
+  prem.addEventListener("click", () => {
+    window.location.href = config["APP_URL "] + "/Rachelia/Pages/premium/premium/";
+  })
+}
+
 export const sidebar_menus = {
   you: [
     {
@@ -31,18 +39,23 @@ export const sidebar_menus = {
   movie_list: [
     {
       title: "Now Playing",
+      path : "upcoming",
       icon: `<i class="fa-solid fa-clapperboard"></i>`,
     },
     {
       title: "Popular",
+      path : "upcoming",
+
       icon: `<i class="fa-solid fa-fire"></i>`,
     },
     {
       title: "Top Rated",
+      path : "upcoming",
       icon: `<i class="fa-solid fa-star"></i>`,
     },
     {
       title: "Upcoming",
+      path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
       icon: `<i class="fa-solid fa-hourglass-half"></i>`,
     },
   ],

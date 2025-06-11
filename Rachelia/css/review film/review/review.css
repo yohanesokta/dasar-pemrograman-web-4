@@ -1,0 +1,74 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    min-height: 100vh; 
+    margin: 30px; 
+}
+
+h1 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 40px;
+}
+
+.baris {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.review {
+    flex: 1 1 30%;
+    padding: 15px;
+    border: 1px solid var(--sidebar-foreground);
+    border-radius: 8px;
+    text-align: center;
+    background-color: var(--muted);
+    margin: 0;
+}
+
+.bintang {
+    font-size: 1.5rem;
+    color: var(--muted-foreground);
+    display: inline-block;
+}
+
+.bintang[data-rating="5"]::before {
+    content: "★★★★★";
+    color: var(--chart-5);
+}
+
+.bintang[data-rating="4"]::before {
+    content: "★★★★☆";
+    color: var(--chart-5);
+}
+
+.bintang[data-rating="3"]::before {
+    content: "★★★☆☆";
+    color: var(--chart-5);
+}
+
+.bintang[data-rating="2"]::before {
+    content: "★★☆☆☆";
+    color: var(--chart-5);
+}
+
+.bintang[data-rating="1"]::before {
+    content: "★☆☆☆☆";
+    color: var(--chart-5);
+}
+
+.nama {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.isi {
+    font-size: 1rem;
+    color: var(--foreground);
+    margin-top: 15px;
+}

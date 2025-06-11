@@ -1,4 +1,5 @@
 import { fetchMovies } from "../fetch-movies.js";
+import {config} from "../../../../../app_config.js"
 
 async function getMovieData(type) {
   const data = await fetchMovies(type);
@@ -20,12 +21,14 @@ export async function GenerateMovieSection() {
   const movie_list = movies
   .map(
       (movie) => `
+        <a href="${config["APP_URL "]}/yohanes/detail?id=${movie.id}" class="movie_poster"> 
           <figure class="backdrop" title="${movie.original_title}">
             <div class="backdrop_cover">
               <img src="https://image.tmdb.org/t/p/w500${movie.backdrop_path}" alt="${movie.original_title} backdrop">
             </div>
             <figcaption>${movie.original_title}</figcaption>
             </figure>
+            </a>
         `
     )
     .join("");
@@ -37,12 +40,14 @@ export async function GenerateTVSection() {
   const movie_list = movies
     .map(
       (movie) => `
+      <a href="${config["APP_URL "]}/yohanes/detail?id=${movie.id}" class="movie_poster"> 
           <figure class="backdrop" title="${movie.original_name}">
             <div class="backdrop_cover">
               <img src="https://image.tmdb.org/t/p/w500${movie.backdrop_path}" alt="${movie.original_name} backdrop">
             </div>
             <figcaption>${movie.original_name}</figcaption>
           </figure>
+        </a>
         `
     )
     .join("");

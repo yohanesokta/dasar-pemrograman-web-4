@@ -15,6 +15,9 @@ $schema = "CREATE TABLE $db_database.`users` (
     `expire_premium` VARCHAR(255) NULL DEFAULT NULL,
     `wach_letter` JSON  NULL DEFAULT NULL,
     `download` JSON NULL DEFAULT NULL,
+    `family_user` JSON NULL DEFAULT NULL,
+    `family_token_generated` INT NULL DEFAULT NULL,
+    `created_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 
 
