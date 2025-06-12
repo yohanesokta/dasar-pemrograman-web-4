@@ -6,7 +6,7 @@
 .box{
     height: auto;
     width: 200px;
-    border: 2px var(--foreground) solid;
+    border: 1px var(--foreground) solid;
     padding: 15px;
 }
 .judul{
