@@ -9,7 +9,7 @@ export default function Sidebar() {
         ${sidebar_menus.you
           .map(
             (d) =>
-              `<a href="" class="button button_ghost">${d.icon} ${d.title}</a>`
+              `<a href="${d.path}" class="button button_ghost">${d.icon} ${d.title}</a>`
           )
           .join("")}
       </div>

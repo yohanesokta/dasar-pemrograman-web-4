@@ -114,7 +114,18 @@
 
     <script type="module" src="../../evan/js/layout-dom.js"></script>
     <script type="module" src="../../evan/js/create-elements/theme_toggle.js"></script>
-    <script>
+    <script type="module">
+      import {config} from "../../app_config.js"
+      async function handle_history(formData) {
+          
+          await fetch(config["APP_URL "] + "/libs/users/add_history.php",
+              {
+                  method : "POST",
+                  body : formData
+              }
+          )
+      }      
+
       const body = document.querySelector('main');
       const image_thumbnail = document.querySelector('#image_thumbnail');
       const overview = document.querySelector('#overview');
@@ -135,6 +146,16 @@
         }
       }).then((event) => event.json()).then((data) => {
         console.log(data)
+
+        const formData = new FormData();
+        formData.append('username',"<?php echo $user_data['username']?>")
+        formData.append('film_id',id)
+        formData.append('film_name',data.title)
+        formData.append('film_thumbnail',data.poster_path)
+        formData.append('film_desc',data.overview)
+        
+        handle_history(formData);
+
         body.style.display = 'block';
         overview.innerHTML = data.overview;
         release.innerHTML = `Tanggal rilis: ${data.release_date}`;
@@ -143,7 +164,6 @@
         title_movie.innerHTML = data.title;
         image_thumbnail.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
       })
-
     </script>
   </body>
 </html>

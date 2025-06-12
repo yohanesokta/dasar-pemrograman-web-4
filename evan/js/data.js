@@ -17,44 +17,53 @@ export const sidebar_menus = {
   you: [
     {
       title: "History",
+      path: config["APP_URL "] + "/angga/history",
       icon: `<i class="fa-solid fa-clock-rotate-left"></i>`,
     },
     {
       title: "Favorite Movies",
       icon: `<i class="fa-solid fa-thumbs-up"></i>`,
+      path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
+
     },
     {
       title: "Family Share",
       icon: `<i class="fa-solid fa-share-nodes"></i>`,
+      path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
+
     },
     {
       title: "Watch Later",
       icon: `<i class="fa-solid fa-clock"></i>`,
+      path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
+
     },
     {
       title: "Downloads",
       icon: `<i class="fa-solid fa-download"></i>`,
+      path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
+
     },
   ],
   movie_list: [
     {
       title: "Now Playing",
-      path : "upcoming",
+      path : config["APP_URL "],
       icon: `<i class="fa-solid fa-clapperboard"></i>`,
     },
     {
       title: "Popular",
-      path : "upcoming",
+      path : config["APP_URL "],
 
       icon: `<i class="fa-solid fa-fire"></i>`,
     },
     {
       title: "Top Rated",
-      path : "upcoming",
+      path : config["APP_URL "],
       icon: `<i class="fa-solid fa-star"></i>`,
     },
     {
-      title: "Upcoming",
+      title: "Upcomming Film",
       path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
       icon: `<i class="fa-solid fa-hourglass-half"></i>`,
     },
