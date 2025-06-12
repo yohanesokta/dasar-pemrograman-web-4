@@ -51,7 +51,7 @@ export default function Sidebar() {
           .map(
             (d) =>
               `<a href="" class="button button_ghost">
-              ${d}
+              ${d.name}
             </a>`
           )
           .join("")}

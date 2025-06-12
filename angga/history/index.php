@@ -66,11 +66,13 @@
           <div id="film-grid" class="grid">
             <?php if($user_history){foreach($user_history as $history){ ?>
                 <div class="card">
-                  <img src="https://image.tmdb.org/t/p/original<?php echo $history[4]?>" alt="${film.title}">
-                  <div class="card-content">
-                    <div class="card-title"><?php echo $history[3]?></div>
-                    <div class="card-info"><?php echo $history[5]?></div>
-                  </div>
+                  <a href="<?php echo $app_url."/yohanes/detail?id=".$history[2]; ?>">
+                    <img src="https://image.tmdb.org/t/p/original<?php echo $history[4]?>" alt="${film.title}">
+                    <div class="card-content">
+                      <div class="card-title"><?php echo $history[3]?></div>
+                      <div class="card-info"><?php echo $history[5]?></div>
+                    </div>
+                  </a>
                 </div>
             <?php }}?>
           </div>

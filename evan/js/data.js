@@ -16,6 +16,11 @@ if (prem) {
 export const sidebar_menus = {
   you: [
     {
+      title: "Home",
+      path: config["APP_URL "],
+      icon: `<i class="fa-solid fa-home"></i>`,
+    },
+    {
       title: "History",
       path: config["APP_URL "] + "/angga/history",
       icon: `<i class="fa-solid fa-clock-rotate-left"></i>`,
@@ -29,7 +34,7 @@ export const sidebar_menus = {
     {
       title: "Family Share",
       icon: `<i class="fa-solid fa-share-nodes"></i>`,
-      path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
+      path: config["APP_URL "] + "/jayro/page/family share/",
 
     },
     {
@@ -78,7 +83,14 @@ export const sidebar_menus = {
       path: config["APP_URL "] + "/evan/pages/@Discover/tv-series",
     },
   ],
-  trending: ["All", "Movies", "People", "TV / Series"],
+  trending: [{
+    name : "All",
+    path : "",
+    },{
+      name : "Movie",
+      path : ""
+    }
+  ],
   others: [
     // "Kids Mode",
     {

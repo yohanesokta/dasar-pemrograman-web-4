@@ -1,3 +1,7 @@
+<?php
+  require_once("../../../libs/auth/middleware.php");
+  require_once("../../../libs/users/family_share/generate.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
