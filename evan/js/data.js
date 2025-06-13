@@ -28,7 +28,7 @@ export const sidebar_menus = {
     {
       title: "Favorite Movies",
       icon: `<i class="fa-solid fa-thumbs-up"></i>`,
-      path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
+      path: config["APP_URL "] + "/fitria/pages/favorite/",
 
     },
     {
@@ -40,7 +40,7 @@ export const sidebar_menus = {
     {
       title: "Watch Later",
       icon: `<i class="fa-solid fa-clock"></i>`,
-      path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
+      path: config["APP_URL "] + "/fitria/pages/watch-letter/",
 
     },
     {

@@ -79,6 +79,8 @@
                     <button class="active">Overview</button>
                     <button><a href="../../angga/actor film?id=<?php echo $_GET['id']; ?>">Actor Film</a></button>
                     <button><a href="../../angga/crew?id= <?php echo $_GET['id']; ?>">Crew Film</a></button>
+                    <button id="btn-love" style="color: gray;"><i id="icn-love"  class="fa-solid fa-heart"></i></button>
+                    <button id="btn-letter" style="color: gray;"><i id='icn-letter' class="fa-solid fa-clock-rotate-left" ></i> Watch Letter</button>
 
                 </div>
                 <ul>
@@ -116,6 +118,25 @@
     <script type="module" src="../../evan/js/layout-dom.js"></script>
     <script type="module" src="../../evan/js/create-elements/theme_toggle.js"></script>
     <script type="module">
+      const formData = new FormData();
+      let liked = null;
+      let letter = null
+
+      function refreshBtn() {
+        if (liked == 1) {
+          document.getElementById("btn-love").style.color = "red";
+        } else {
+          document.getElementById("btn-love").style.color = "gray";
+        }
+
+
+         if (letter == 1) {
+          document.getElementById("btn-letter").style.color = "green";
+        } else {
+          document.getElementById("btn-letter").style.color = "gray";
+        }
+      }
+
       import {config} from "../../app_config.js"
       async function handle_history(formData) {
           
@@ -124,8 +145,51 @@
                   method : "POST",
                   body : formData
               }
+          ).then(val => val.json()).then(val => {
+            liked = val.liked
+            letter = val.wl
+            refreshBtn()
+          })
+      }
+
+
+      document.getElementById("btn-love").addEventListener("click",(event) => {
+
+          if (liked == null) {
+            formData.append("liked",1);
+            liked = 1
+          } else if (liked == 1) {
+            liked = 0; formData.set('liked',0);
+          } else {
+            liked = 1; formData.set('liked',1);
+          }
+          refreshBtn()
+          fetch(config["APP_URL "] + "/libs/users/add_history.php",
+              {
+                  method : "POST",
+                  body : formData
+              }
           )
-      }      
+      })
+
+      document.getElementById("btn-letter").addEventListener("click",(event) => {
+
+          if (letter == null) {
+            formData.append("letter",1);
+            letter = 1
+          } else if (letter == 1) {
+            letter = 0; formData.set('letter',0);
+          } else {
+            letter = 1; formData.set('letter',1);
+          }
+          refreshBtn()
+          fetch(config["APP_URL "] + "/libs/users/add_history.php",
+              {
+                  method : "POST",
+                  body : formData
+              }
+          )
+      })
 
       const body = document.querySelector('main');
       const image_thumbnail = document.querySelector('#image_thumbnail');
@@ -148,7 +212,6 @@
       }).then((event) => event.json()).then((data) => {
         console.log(data)
 
-        const formData = new FormData();
         formData.append('username',"<?php echo $user_data['username']?>")
         formData.append('film_id',id)
         formData.append('film_name',data.title)

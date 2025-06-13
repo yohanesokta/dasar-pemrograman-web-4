@@ -26,6 +26,8 @@ $schema2 = "CREATE TABLE $db_database. `history` (
     `film_id` INT NOT NULL,
     `film_name` VARCHAR(255) NOT NULL,
     `film_thumbnail` VARCHAR(255) NOT NULL,
+    `liked` INT NULL DEFAULT '0',
+    `wathletter` INT NULL DEFAULT '0',
     `update_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
      PRIMARY KEY (`ID`)) ENGINE = InnoDB";
 

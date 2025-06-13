@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+
+.film-container {
+    font-family: 'Outfit';
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    .section-title {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 50px;
+        position: relative;
+        font-weight: 600;
+    }
+
+    .section-title::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: var(--chart-1);
+        margin: 15px auto 0;
+    }
+
+    .film-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .film-card {
+        width: 500px;
+        background: var(--sidebar-border);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .film-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .film-poster {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-bottom: 4px solid var(--destructive);
+    }
+
+    .film-info {
+        padding: 20px;
+    }
+
+    .film-title {
+        font-size: 1.3rem;
+        margin: 0 0 10px 0;
+        color: var(--foreground);
+        font-weight: 600;
+    }
+
+    .film-meta {
+        display: flex;
+        justify-content: space-between;
+        color: var(--muted-foreground);
+        font-size: 0.9rem;
+    }
+
+    .film-year {
+        color: var(--chart-1);
+        font-weight: 600;
+    }
+
+}
