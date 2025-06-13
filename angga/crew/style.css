@@ -1,0 +1,63 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  background-color: #141414;
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  border-left: 6px solid blueviolet;
+  padding-left: 12px;
+  color: whitesmoke;
+}
+
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px 30px;
+}
+
+.cast-item {
+  display: flex;
+  align-items: center;
+  background-color: #222;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.cast-item:hover {
+  transform: scale(1.02);
+}
+
+.cast-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #ddd;
+  background-size: cover;
+  background-position: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.cast-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.actor-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: whitesmoke;
+}
+
+.character-name {
+  font-size: 14px;
+  color: white;
+}

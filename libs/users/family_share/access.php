@@ -13,6 +13,7 @@
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             if ($token == $row['family_token_generated']) {
+                $add_users_to_parrent = "UPDATE  ";
                 echo json_encode(["action" => true]);
             } else {
                 echo json_encode(["action"=> false]);

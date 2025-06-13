@@ -77,8 +77,9 @@
                 <h1 id="title_movie">Minecraft Movie</h1>
                 <div class="menu">
                     <button class="active">Overview</button>
-                    <button>More Like This</button>
-                    <button>Details</button>
+                    <button><a href="../../angga/actor film?id=<?php echo $_GET['id']; ?>">Actor Film</a></button>
+                    <button><a href="../../angga/crew?id= <?php echo $_GET['id']; ?>">Crew Film</a></button>
+
                 </div>
                 <ul>
                     <li>
