@@ -31,7 +31,8 @@
             ><span>nonton</span>.aja</a
           >
           <button type="button" id="button_search" class="button button_search">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass"></i> 
+            
             Seacrh Movie
           </button>
           <div class="header_cta">
