@@ -12,7 +12,6 @@
         
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            var_dump($row['family_token_generated']);
             if ($token == $row['family_token_generated']) {
                 echo json_encode(["action" => true]);
             } else {
