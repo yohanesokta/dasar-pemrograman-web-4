@@ -149,7 +149,7 @@
                     >
                   </div>
                   <div class="button-14">
-                    <a href="../family share/index.html">Family Share</a>
+                    <a href="../family share">Family Share</a>
                   </div>
                 </form>
               </div>
