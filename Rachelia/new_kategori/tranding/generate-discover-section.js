@@ -1,7 +1,7 @@
 import {config} from "../../../app_config.js"
 
 async function fetchMovies(type) {
-  const url = `https://api.themoviedb.org/3/discover/${type}?include_adult=false&include_video=true&language=en-US&page=1&sort_by=popularity.desc`;
+  const url = `https://api.themoviedb.org/3/trending/movie/day?include_adult=false&include_video=true&language=en-US&page=1&sort_by=popularity.desc`;
   const options = {
     method: "GET",
     headers: {
@@ -24,7 +24,7 @@ function GenerateDiscoverSection(title, movie_list) {
   const main = document.getElementById("main");
   main.innerHTML = `
     <div class="movie_posters_section">
-      <h1>${title}</h1>
+      <h1>Trendings</h1>
       <div class="movie_poster_grid">${movie_list}</div>
     </div>
   `;
