@@ -1,0 +1,6 @@
+*.DStore
+.vscode
+vscode
+.env
+/Models/.env
+.env

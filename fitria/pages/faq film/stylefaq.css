@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+body {
+    font-family: 'Outfit';
+    padding: 24px;
+}
+
+.judul {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 70px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.search input {
+    max-width: 750px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 3px solid oklch(0.379 0.146 265.522);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.daftar {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pertanyaan h3 {
+    margin-top: 20px;
+    text-transform: capitalize;
+    color: oklch(0.379 0.146 265.522);
+}
+
+.pertanyaan ul {
+    padding: 0;
+}
+
+.pertanyaan ul li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.pertanyaan ul li a {
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.6);
+}
+
+.pertanyaan ul li a:hover {
+    text-decoration: underline;
+}

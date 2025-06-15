@@ -1,0 +1,81 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    min-height: 100vh;
+    position: relative;
+}
+
+.isicontent {
+    background-color: var(--secondary);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--border);
+    width: 500px;
+    height: auto;
+    border: 2px solid var(--foreground);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+label{
+    color: var(--foreground);
+}
+.Konfirmasi {
+    background-color: var(--popover-foreground);
+    color: var(--muted);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto;
+}
+
+.Konfirmasi:hover {
+    background-color: var(--sidebar-accent-foreground);
+}
+
+.payment-method {
+    margin-top: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.qris-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--foreground);
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.qris-box span {
+    color: var(--foreground);
+}
+
+.qris-img {
+    width: 120px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.qris-box span {
+    font-size: 16px;
+}
+
+.qris-box.selected {
+    background-color: var(--primary);
+    border-color: var(--foreground);
+}

@@ -1,0 +1,45 @@
+/* CONTAINER */
+.container, .container_xl {
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container {
+  max-width: 1536px;
+}
+
+.container_xl {
+  max-width: 1024px;
+}
+
+
+
+
+/* GRID LAYOUT */
+.grid_layout {
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+  ;
+  grid-template-columns: 240px auto;
+  grid-template-rows: 64px auto;
+}
+
+
+
+
+/* MOVIE POSTER grid */
+.movie_poster_grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 256px));
+  gap: 20px;
+}
+
+
+
+
+/* RESPONSIVE BREAKPOINT */
+/* TABLET */
