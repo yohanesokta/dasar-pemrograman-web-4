@@ -119,13 +119,16 @@
                     <div class="isi-bio">
                       <span>Email</span>
                       <div class="isi">
+
                         <input class="input_bio" type="text"  value="<?php echo $user_data['email'] ?>" disabled>
+
 
                       </div>
                     </div>
                     <div class="isi-bio">
                       <span>Username</span>
                       <div class="isi">
+
                         <input class="input_bio" type="text" value="<?php echo $user_data['username'] ?>" disabled>
                         <input class="input_bio" type="text" name="username" id="username" value="<?php echo $user_data['username'] ?>" style="display:none;">
 
@@ -152,7 +155,7 @@
                     >
                   </div>
                   <div class="button-14">
-                    <a href="../family share/index.html">Family Share</a>
+                    <a href="../family share">Family Share</a>
                   </div>
                 </form>
               </div>
