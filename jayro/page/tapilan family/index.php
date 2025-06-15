@@ -47,7 +47,9 @@
       </div>
       <div class="g-kontent">
         <div class="tambah_pengguna">
-          <p><?php echo $token;?></p>
+          <div class="g-kontent">
+            <p>code : <?php echo $token;?></p>
+          </div>
           <button class="button-07" onclick="">undang</button>
         </div>
       </div>
