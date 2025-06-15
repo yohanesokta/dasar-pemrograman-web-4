@@ -29,7 +29,7 @@ $schema2 = "CREATE TABLE $db_database. `history` (
     `update_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
      PRIMARY KEY (`ID`)) ENGINE = InnoDB";
 
-if ( $conn->execute_query($schema2) && $conn->execute_query($schema2)) {
+if ( $conn->execute_query($schema) && $conn->execute_query($schema2)) {
 echo "<h1> Table And Database Success Created! Dont Use Again </h1>";
 }
 else { 
