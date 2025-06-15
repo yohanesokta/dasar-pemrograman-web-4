@@ -43,12 +43,7 @@ export const sidebar_menus = {
       path: config["APP_URL "] + "/fitria/pages/watch-letter/",
 
     },
-    {
-      title: "Downloads",
-      icon: `<i class="fa-solid fa-download"></i>`,
-      path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
 
-    },
   ],
   movie_list: [
     {

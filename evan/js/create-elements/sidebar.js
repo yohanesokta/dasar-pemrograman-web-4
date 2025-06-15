@@ -45,7 +45,7 @@ export default function Sidebar() {
   `;
   const trending = `
     <section>
-      <h3>Trending</h3>
+      <h3>Kategori</h3>
       <div>
         ${sidebar_menus.trending
           .map(
@@ -73,5 +73,5 @@ export default function Sidebar() {
       </div>
       </section>
   `;
-  sidebar.innerHTML = sidebar_you + movie_list + discover + trending + sidebar_others;
+  sidebar.innerHTML = sidebar_you + movie_list + trending + discover + sidebar_others;
 }
