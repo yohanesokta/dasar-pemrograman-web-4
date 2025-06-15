@@ -98,6 +98,11 @@ body {
         button:last-child{
             border-left: none;
         }
+
+        #btn-love,#btn-letter{
+            background-color: transparent !important;
+            border: none !important;
+        }
         .active{
             opacity: .5;
         }

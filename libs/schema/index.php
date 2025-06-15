@@ -1,5 +1,5 @@
 <?php
-require("../index.php");
+require_once(__DIR__."/../index.php");
 
 $schema = "CREATE TABLE $db_database.`users` (
     `id` INT NOT NULL AUTO_INCREMENT,
@@ -16,7 +16,7 @@ $schema = "CREATE TABLE $db_database.`users` (
     `wach_letter` JSON  NULL DEFAULT NULL,
     `download` JSON NULL DEFAULT NULL,
     `family_user` JSON NULL DEFAULT NULL,
-    `family_token_generated` INT NULL DEFAULT NULL,
+    `family_token_generated` VARCHAR(255) NULL DEFAULT NULL,
     `created_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)) ENGINE = InnoDB;";
 
@@ -26,12 +26,22 @@ $schema2 = "CREATE TABLE $db_database. `history` (
     `film_id` INT NOT NULL,
     `film_name` VARCHAR(255) NOT NULL,
     `film_thumbnail` VARCHAR(255) NOT NULL,
+    `liked` INT NULL DEFAULT '0',
+    `wathletter` INT NULL DEFAULT '0',
     `update_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
      PRIMARY KEY (`ID`)) ENGINE = InnoDB";
 
-if ( $conn->execute_query($schema2) && $conn->execute_query($schema2)) {
-echo "<h1> Table And Database Success Created! Dont Use Again </h1>";
-}
-else { 
-    echo "<h1>Fail<h1>";
+$family_user = "CREATE TABLE $db_database. `family` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `parrent_id` INT NOT NULL,
+    `child_id` INT NOT NULL,
+    PRIMARY KEY (`ID`)) ENGINE = InnoDB";
+
+
+try {
+    $conn->execute_query($schema);
+    $conn->execute_query($schema2);
+    $conn->execute_query($family_user);
+} catch (Exception $e) {
+    echo "". $e->getMessage() ."";
 }

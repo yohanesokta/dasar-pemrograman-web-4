@@ -16,45 +16,59 @@ if (prem) {
 export const sidebar_menus = {
   you: [
     {
+      title: "Home",
+      path: config["APP_URL "],
+      icon: `<i class="fa-solid fa-home"></i>`,
+    },
+    {
       title: "History",
+      path: config["APP_URL "] + "/angga/history",
       icon: `<i class="fa-solid fa-clock-rotate-left"></i>`,
     },
     {
       title: "Favorite Movies",
       icon: `<i class="fa-solid fa-thumbs-up"></i>`,
+      path: config["APP_URL "] + "/fitria/pages/favorite/",
+
     },
     {
       title: "Family Share",
       icon: `<i class="fa-solid fa-share-nodes"></i>`,
+      path: config["APP_URL "] + "/jayro/page/family share/",
+
     },
     {
       title: "Watch Later",
       icon: `<i class="fa-solid fa-clock"></i>`,
+      path: config["APP_URL "] + "/fitria/pages/watch-letter/",
+
     },
     {
       title: "Downloads",
       icon: `<i class="fa-solid fa-download"></i>`,
+      path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
+
     },
   ],
   movie_list: [
     {
       title: "Now Playing",
-      path : "upcoming",
+      path : config["APP_URL "],
       icon: `<i class="fa-solid fa-clapperboard"></i>`,
     },
     {
       title: "Popular",
-      path : "upcoming",
+      path : config["APP_URL "],
 
       icon: `<i class="fa-solid fa-fire"></i>`,
     },
     {
       title: "Top Rated",
-      path : "upcoming",
+      path : config["APP_URL "],
       icon: `<i class="fa-solid fa-star"></i>`,
     },
     {
-      title: "Upcoming",
+      title: "Upcomming Film",
       path: config["APP_URL "] + "/fitria/pages/upcoming copy/",
       icon: `<i class="fa-solid fa-hourglass-half"></i>`,
     },
@@ -69,7 +83,14 @@ export const sidebar_menus = {
       path: config["APP_URL "] + "/evan/pages/@Discover/tv-series",
     },
   ],
-  trending: ["All", "Movies", "People", "TV / Series"],
+  trending: [{
+    name : "All",
+    path : "",
+    },{
+      name : "Movie",
+      path : ""
+    }
+  ],
   others: [
     // "Kids Mode",
     {

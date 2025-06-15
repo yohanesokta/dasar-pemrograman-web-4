@@ -1,6 +1,6 @@
 <?php
-  require("../../../libs/auth/middleware.php");
-  require("../../../libs/users/profiles.php");
+  require("../../../libs/auth/middleware.php"); // login atau gak ( userdata !) username2
+  require("../../../libs/users/profiles.php"); // simpan -> dirubah username3 
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +47,7 @@
             <button id="getprem" class="button button_ghost">Get Premium</button>
             <?php } ?>
             <a href="#" class="button button_primary">
-                <p style="color:white;"><?php  echo $user_data['username']; ?></p>
+                <p style="color:white;"><?php  echo $user_data['name']; ?></p>
               <i class="fa-solid fa-user"></i>
             </a>
 
@@ -119,13 +119,19 @@
                     <div class="isi-bio">
                       <span>Email</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="email" value="<?php echo $user_data['email'] ?>" disabled`>
+
+                        <input class="input_bio" type="text"  value="<?php echo $user_data['email'] ?>" disabled>
+
+
                       </div>
                     </div>
                     <div class="isi-bio">
                       <span>Username</span>
                       <div class="isi">
-                        <input class="input_bio" type="text" name="" id="username" value="<?php echo $user_data['username'] ?>" disabled>
+
+                        <input class="input_bio" type="text" value="<?php echo $user_data['username'] ?>" disabled>
+                        <input class="input_bio" type="text" name="username" id="username" value="<?php echo $user_data['username'] ?>" style="display:none;">
+
                       </div>
                     </div>
                     <?php if ($is_edited) { if ($response['errors']) {?>

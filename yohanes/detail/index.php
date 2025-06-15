@@ -41,7 +41,7 @@
             <button id="getprem" class="button button_ghost">Get Premium</button>
             <?php } ?>
             <a href="../../jayro/page/profil user/" class="button button_primary">
-                <p style="color:white;"><?php  echo $user_data['username']; ?></p>
+                <p style="color:white;"><?php  echo $user_data['name']; ?></p>
               <i class="fa-solid fa-user"></i>
             </a>
 
@@ -77,8 +77,11 @@
                 <h1 id="title_movie">Minecraft Movie</h1>
                 <div class="menu">
                     <button class="active">Overview</button>
-                    <button>More Like This</button>
-                    <button>Details</button>
+                    <button><a href="../../angga/actor film?id=<?php echo $_GET['id']; ?>">Actor Film</a></button>
+                    <button><a href="../../angga/crew?id= <?php echo $_GET['id']; ?>">Crew Film</a></button>
+                    <button id="btn-love" style="color: gray;"><i id="icn-love"  class="fa-solid fa-heart"></i></button>
+                    <button id="btn-letter" style="color: gray;"><i id='icn-letter' class="fa-solid fa-clock-rotate-left" ></i> Watch Letter</button>
+
                 </div>
                 <ul>
                     <li>
@@ -114,7 +117,80 @@
 
     <script type="module" src="../../evan/js/layout-dom.js"></script>
     <script type="module" src="../../evan/js/create-elements/theme_toggle.js"></script>
-    <script>
+    <script type="module">
+      const formData = new FormData();
+      let liked = null;
+      let letter = null
+
+      function refreshBtn() {
+        if (liked == 1) {
+          document.getElementById("btn-love").style.color = "red";
+        } else {
+          document.getElementById("btn-love").style.color = "gray";
+        }
+
+
+         if (letter == 1) {
+          document.getElementById("btn-letter").style.color = "green";
+        } else {
+          document.getElementById("btn-letter").style.color = "gray";
+        }
+      }
+
+      import {config} from "../../app_config.js"
+      async function handle_history(formData) {
+          
+          await fetch(config["APP_URL "] + "/libs/users/add_history.php",
+              {
+                  method : "POST",
+                  body : formData
+              }
+          ).then(val => val.json()).then(val => {
+            liked = val.liked
+            letter = val.wl
+            refreshBtn()
+          })
+      }
+
+
+      document.getElementById("btn-love").addEventListener("click",(event) => {
+
+          if (liked == null) {
+            formData.append("liked",1);
+            liked = 1
+          } else if (liked == 1) {
+            liked = 0; formData.set('liked',0);
+          } else {
+            liked = 1; formData.set('liked',1);
+          }
+          refreshBtn()
+          fetch(config["APP_URL "] + "/libs/users/add_history.php",
+              {
+                  method : "POST",
+                  body : formData
+              }
+          )
+      })
+
+      document.getElementById("btn-letter").addEventListener("click",(event) => {
+
+          if (letter == null) {
+            formData.append("letter",1);
+            letter = 1
+          } else if (letter == 1) {
+            letter = 0; formData.set('letter',0);
+          } else {
+            letter = 1; formData.set('letter',1);
+          }
+          refreshBtn()
+          fetch(config["APP_URL "] + "/libs/users/add_history.php",
+              {
+                  method : "POST",
+                  body : formData
+              }
+          )
+      })
+
       const body = document.querySelector('main');
       const image_thumbnail = document.querySelector('#image_thumbnail');
       const overview = document.querySelector('#overview');
@@ -135,6 +211,15 @@
         }
       }).then((event) => event.json()).then((data) => {
         console.log(data)
+
+        formData.append('username',"<?php echo $user_data['username']?>")
+        formData.append('film_id',id)
+        formData.append('film_name',data.title)
+        formData.append('film_thumbnail',data.poster_path)
+        formData.append('film_desc',data.overview)
+        
+        handle_history(formData);
+
         body.style.display = 'block';
         overview.innerHTML = data.overview;
         release.innerHTML = `Tanggal rilis: ${data.release_date}`;
@@ -143,7 +228,6 @@
         title_movie.innerHTML = data.title;
         image_thumbnail.src = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
       })
-
     </script>
   </body>
 </html>

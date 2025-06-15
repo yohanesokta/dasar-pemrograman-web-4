@@ -1,3 +1,7 @@
+<?php
+  require_once("../../../libs/auth/middleware.php");
+  require_once("../../../libs/users/family_share/generate.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,18 +31,23 @@
         <div class="box_main">
           <ol class="main" id="add">
             <li>
+
+            <?php   foreach($family_data as $data) { ?>
               <div class="img">
                 <i class="fa-solid fa-user"></i>
                 <div class="g-kontent">
-                  <div class="username" id="user">lorem</div>
+                  <div class="username" id="user"><?php echo $data["name"]; ?></div>
                 </div>
               </div>
+
+              <?php  }?>
             </li>
           </ol>
         </div>
       </div>
       <div class="g-kontent">
         <div class="tambah_pengguna">
+          <p><?php echo $token;?></p>
           <button class="button-07" onclick="">undang</button>
         </div>
       </div>

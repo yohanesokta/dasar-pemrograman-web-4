@@ -15,7 +15,9 @@ $app_url = $_ENV["APP_URL"];
 $conn = new mysqli($db_host, $db_username, $db_password, $db_database);
 
 if ($conn->connect_error) {
-  die("Koneksi gagal: " . $conn->connect_error);
+  die("Koneksi gagal: setting .env dengan benar woy!" . $conn->connect_error);
+} else {
+  
 }
 
 function redirect_url($url = ""){

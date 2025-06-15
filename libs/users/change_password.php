@@ -1,5 +1,4 @@
 <?php
-//  expectasi ku sudah import middleware
 
     $is_active = false;
     $response = array("errors" => false, "message" => ""); 
@@ -17,5 +16,4 @@
             $response['errors'] = true;
             $response['message'] = "Coba Masukkan Password lama yang benar";
         }
-
     }
