@@ -1,6 +1,5 @@
 <?php
   require_once("../../../libs/auth/middleware.php");
-  require_once("../../../libs/users/family_share/generate.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,13 +35,29 @@
             Seacrh Movie
           </button>
           <div class="header_cta">
-            <button class="button button_ghost">Get Premium</button>
-            <button class="button button_outline">
-              <i class="fa-regular fa-bell"></i>
-            </button>
-            <button class="button button_primary">
+           <?php 
+                if ($is_login) {
+            ?>
+
+             <?php 
+                if ($user_data["premium"] == 0) {
+            ?>
+            <button id="getprem" class="button button_ghost">Get Premium</button>
+            <?php } ?>
+            <a href="./jayro/page/profil user/" class="button button_primary">
+                <p style="color:white;"><?php  echo $user_data['name']; ?></p>
               <i class="fa-solid fa-user"></i>
-            </button>
+            </a>
+
+            <?php } else { ?>
+                <a href="./jayro/page/login" class="button button_primary">
+                    Login
+                </a>
+
+                <a href="./jayro/page/register" class="button button_primary">
+                    Register
+                </a>
+            <?php  }?>
           </div>
         </div>
       </header>
@@ -75,19 +90,30 @@
                       limiting access to specific games.</span
                     >
                   </div>
+
+                  
                   <div class="display-button">
                     <div class="button-06">
                       <div class="sub-button">
-                        <a href="">
+                        <a href="<?php if ($user_data['premium'])  {
+                          echo '../tapilan family/';
+                        } else {
+                          echo $app_url.'/Rachelia/Pages/premium/premium/';
+
+                          
+                          } ?>">
                           <span>CREATE FAMILY</span><br />
                           <i class="fa-solid fa-plus"></i>
                           <i class="fa-solid fa-users"></i>
                         </a>
                       </div>
                     </div>
+
+
+
                     <div class="button-06">
                       <div class="sub-button">
-                        <a href="">
+                        <a href="../input family">
                           <span>JOIN FAMILY</span><br />
                           <i class="fa-solid fa-arrow-right"></i>
                           <i class="fa-solid fa-users"></i>

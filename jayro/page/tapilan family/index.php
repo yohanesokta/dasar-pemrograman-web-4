@@ -31,12 +31,16 @@
         <div class="box_main">
           <ol class="main" id="add">
             <li>
+
+            <?php   foreach($family_data as $data) { ?>
               <div class="img">
                 <i class="fa-solid fa-user"></i>
                 <div class="g-kontent">
-                  <div class="username" id="user">lorem</div>
+                  <div class="username" id="user"><?php echo $data["name"]; ?></div>
                 </div>
               </div>
+
+              <?php  }?>
             </li>
           </ol>
         </div>

@@ -41,7 +41,7 @@
             <button id="getprem" class="button button_ghost">Get Premium</button>
             <?php } ?>
             <a href="../../jayro/page/profil user/" class="button button_primary">
-                <p style="color:white;"><?php  echo $user_data['username']; ?></p>
+                <p style="color:white;"><?php  echo $user_data['name']; ?></p>
               <i class="fa-solid fa-user"></i>
             </a>
 

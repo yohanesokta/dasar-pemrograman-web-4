@@ -31,11 +31,17 @@ $schema2 = "CREATE TABLE $db_database. `history` (
     `update_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
      PRIMARY KEY (`ID`)) ENGINE = InnoDB";
 
+$family_user = "CREATE TABLE $db_database. `family` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `parrent_id` INT NOT NULL,
+    `child_id` INT NOT NULL,
+    PRIMARY KEY (`ID`)) ENGINE = InnoDB";
 
 
 try {
     $conn->execute_query($schema);
     $conn->execute_query($schema2);
+    $conn->execute_query($family_user);
 } catch (Exception $e) {
     echo "". $e->getMessage() ."";
 }
