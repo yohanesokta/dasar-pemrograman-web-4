@@ -102,8 +102,7 @@
                   </ul>
                   <div class="btn-review">
                       <a href="../../Rachelia/Pages/review film/review?id=<?php echo $_GET['id']?>" class="r" id="review-button"><i class="fa-solid fa-comment"></i> Review</a>
-                      <a href="../../Rachelia/Pages/review film/review?id=<?php echo $_GET['id']?>" class="r" id="add-review-button"><i class="fa-solid fa-pen-to-square"></i>Add Review</a>
-
+                      <a href="../../Rachelia/Pages/review film/ulasan?id=<?php echo $_GET['id']?>" class="r" id="add-review-button"><i class="fa-solid fa-pen-to-square"></i>Add Review</a>
                   </div>
               </div>
 
@@ -227,6 +226,7 @@
           
           handle_history(formData);
           document.getElementById('review-button').href = `../../Rachelia/Pages/review film/review?id=<?php echo $_GET['id']?>&name=${data.title}`
+
           body.style.display = 'block';
           overview.innerHTML = data.overview;
           release.innerHTML = `Tanggal rilis: ${data.release_date}`;

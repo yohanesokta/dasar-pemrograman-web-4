@@ -38,19 +38,20 @@
       </header>
       <aside id="sidebar">
       </aside>
-      <div class="content">
+      <form action="" class="content">
         <main id="main">
         <div class="review-container">
         <h1>Review Film</h1>
-        <div class="rating">
-            <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
-            <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+
+        <div class="rating" id="star">
+            <input type="radio" required id="star1" name="rating" value="5"><label for="star1">&#9733;</label>
+            <input type="radio" id="star2" name="rating" value="4"><label for="star2">&#9733;</label>
             <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
-            <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
-            <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+            <input type="radio" id="star4" name="rating" value="2"><label for="star4">&#9733;</label>
+            <input type="radio" id="star5" name="rating" value="1"><label for="star5">&#9733;</label>
         </div>
-        <textarea placeholder="Tulis penilaian Anda tentang film ini..." rows="5" cols="50"></textarea>   
-        <a href="/Rachelia/Pages/review film/kirim ulasan/kirim.html"><button class="submit-btn">Kirim Review</button></a>
+        <textarea required placeholder="Tulis penilaian Anda tentang film ini..." rows="5" cols="50" id="text-area" name="text"></textarea>   
+        <button type="submit" class="submit-btn">Kirim Review</button>
         </div>
         </main>
         <footer id="footer">
@@ -63,11 +64,25 @@
             </div>
           </div>
         </footer>
-      </div>
+      </form>
     </div>
+    <script>
+        document.querySelector('form').addEventListener('submit',(event) => {
+          event.preventDefault();
+          const rating = document.querySelector('input[name="rating"]:checked').value;
+          const text = document.getElementById("text-area").value
+          fetch(`https://api.themoviedb.org/3/movie/<?php echo $_GET["id"]; ?>/rating`,{
+            method : "POST",
+      headers: {
+        accept: "application/json",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMTFkZmEyNjQ4ZmM1OTk0MTZkY2M5ODMwYWZmM2IxMyIsIm5iZiI6MTc0ODE5NjQzOC4yMTEsInN1YiI6IjY4MzM1YzU2MTNiOTFhMzdjYTJiNzIyMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9kmTunFIeMecPRfDvSa9Lyfl3lZ9W0LhVDg4K1lc8aE",
+      }, body : JSON.stringify({value : rating}) }).then()
 
+      window.history.back();
+        })
+    </script>
     <script type="module" src="../../../../evan/js/layout-dom.js"></script>
     <script type="module" src="../../../../evan/js/create-elements/theme_toggle.js"></script>
-    <script type="module" src="./js/create-elements/generate-home-content.js"></script>
   </body>
 </html>
