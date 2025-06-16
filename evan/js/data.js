@@ -92,7 +92,15 @@ export const sidebar_menus = {
     },
     {
       name: "Developers",
-      path: "/",
+      path: "",
+    },
+    {
+      name: "HELLo",
+      path: "",
+    },
+    {
+      name: "Developers",
+      path: "",
     },
   ],
 };

@@ -1,5 +1,6 @@
 <?php
 require_once("../../../../libs/auth/middleware.php");
+require_once("../../../../libs/users/get_review.php");
 
 ?>
 <!DOCTYPE html>
@@ -45,7 +46,18 @@ require_once("../../../../libs/auth/middleware.php");
       <main id="main">
         <div class="kontainer">
           <h1>Review Film: <?php echo $_GET['name'];?></h1>
+          <div class="baris">
+        <?php foreach($reviews as $review) { ?>
+             <div class="review">
+                    <div class="bintang" data-rating="<?php echo $review['rating'];?>"></div>
+                    <div class="isi"><?php echo $review['comment'];?></div>
+                    <div class="nama"><?php echo $review['username'];?></div>
+                  </div>
+          <?php } ?>
+          </div>
           <div class="baris" id="baris">
+
+
           </div>
       </main>
       <footer id="footer">
@@ -68,6 +80,7 @@ require_once("../../../../libs/auth/middleware.php");
   <script>
 
     let data = ""
+
     fetch("https://api.themoviedb.org/3/movie/<?php echo $_GET['id']; ?>/reviews", {
       headers: {
         accept: "application/json",

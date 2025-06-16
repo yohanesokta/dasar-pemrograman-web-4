@@ -37,11 +37,22 @@ $family_user = "CREATE TABLE $db_database. `family` (
     `child_id` INT NOT NULL,
     PRIMARY KEY (`ID`)) ENGINE = InnoDB";
 
+$nama = "CREATE TABLE $db_database. `review` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `film_id` INT NOT NULL,
+    `username` TEXT NOT NULL,
+
+    `rating` INT NOT NULL,
+    `comment` TEXT NOT NULL, 
+    PRIMARY KEY (`ID`)) ENGINE = InnoDB";
+
 
 try {
     $conn->execute_query($schema);
     $conn->execute_query($schema2);
     $conn->execute_query($family_user);
+    $conn->execute_query($nama);
+
 } catch (Exception $e) {
     echo "". $e->getMessage() ."";
 }
