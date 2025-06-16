@@ -29,37 +29,33 @@ export const sidebar_menus = {
       title: "Favorite Movies",
       icon: `<i class="fa-solid fa-thumbs-up"></i>`,
       path: config["APP_URL "] + "/fitria/pages/favorite/",
-
     },
     {
       title: "Family Share",
       icon: `<i class="fa-solid fa-share-nodes"></i>`,
       path: config["APP_URL "] + "/jayro/page/family share/",
-
     },
     {
       title: "Watch Later",
       icon: `<i class="fa-solid fa-clock"></i>`,
       path: config["APP_URL "] + "/fitria/pages/watch-letter/",
-
     },
-
   ],
   movie_list: [
     {
       title: "Now Playing",
-      path : config["APP_URL "],
+      path: config["APP_URL "] + "/evan/pages/@MovieList/now-playing",
       icon: `<i class="fa-solid fa-clapperboard"></i>`,
     },
     {
       title: "Popular",
-      path : config["APP_URL "],
+      path: config["APP_URL "] + "/evan/pages/@MovieList/popular",
 
       icon: `<i class="fa-solid fa-fire"></i>`,
     },
     {
       title: "Top Rated",
-      path : config["APP_URL "],
+      path: config["APP_URL "] + "/evan/pages/@MovieList/top-rated",
       icon: `<i class="fa-solid fa-star"></i>`,
     },
     {
@@ -78,13 +74,15 @@ export const sidebar_menus = {
       path: config["APP_URL "] + "/evan/pages/@Discover/tv-series",
     },
   ],
-  trending: [{
-    name : "Trendings",
-    path: config["APP_URL "] + "/Rachelia/new_kategori/tranding",
-    },{
-      name : "Movie",
-      path : ""
-    }
+  trending: [
+    {
+      name: "Trendings",
+      path: config["APP_URL "] + "/Rachelia/new_kategori/tranding",
+    },
+    {
+      name: "Movies",
+      path: config["APP_URL "] + "/evan/pages/@Category/movie",
+    },
   ],
   others: [
     // "Kids Mode",
@@ -94,7 +92,7 @@ export const sidebar_menus = {
     },
     {
       name: "Developers",
-      path: "/"
+      path: "/",
     },
   ],
 };
