@@ -6,7 +6,7 @@ require_once(__DIR__ ."/../index.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $film_id = $_POST['film_id'];
-    $username = isset($_POST['username']) ? (int)$_POST['username'] : '';
+    $username = $_POST['username'];
     $rating = isset($_POST['rating']) ? (int)$_POST['rating'] : 0;
     $comment = isset($_POST['comment']) ? $_POST['comment'] : '';
     

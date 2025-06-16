@@ -20,8 +20,6 @@ $reviews = [];
         
         if ($result->num_rows > 0) {
             $reviews = $result->fetch_all(MYSQLI_ASSOC);
-            var_dump( $reviews );
-
         }
 
         

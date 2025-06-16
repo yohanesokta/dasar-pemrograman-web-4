@@ -91,6 +91,14 @@ export const sidebar_menus = {
       path: "https://github.com/yohanesokta/dasar-pemrograman-web-4",
     },
     {
+      name : "About",
+      path: config["APP_URL "] + "/fitria/pages/aboutme/",
+    },
+    {
+      name : "Faq & Others",
+      path: config["APP_URL "] + "/fitria/pages/faq film/",
+    },
+    {
       name: "Developers",
       path: "",
     },

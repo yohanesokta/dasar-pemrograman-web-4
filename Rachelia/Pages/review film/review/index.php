@@ -30,13 +30,29 @@ require_once("../../../../libs/users/get_review.php");
           Seacrh Movie
         </button>
         <div class="header_cta">
-          <button class="button button_ghost">Get Premium</button>
-          <button class="button button_outline">
-            <i class="fa-regular fa-bell"></i>
-          </button>
-          <button class="button button_primary">
-            <i class="fa-solid fa-user"></i>
-          </button>
+          <?php 
+                if ($is_login) {
+            ?>
+
+             <?php 
+                if ($user_data["premium"] == 0) {
+            ?>
+            <button id="getprem" class="button button_ghost">Get Premium</button>
+            <?php } ?>
+            <a href="./jayro/page/profil user/" class="button button_primary">
+                <p style="color:white;"><?php  echo $user_data['name']; ?></p>
+              <i class="fa-solid fa-user"></i>
+            </a>
+
+            <?php } else { ?>
+                <a href="./jayro/page/login" class="button button_primary">
+                    Login
+                </a>
+
+                <a href="./jayro/page/register" class="button button_primary">
+                    Register
+                </a>
+            <?php  }?>
         </div>
       </div>
     </header>
