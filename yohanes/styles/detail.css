@@ -115,3 +115,16 @@ li{
 li span {
     font-weight: 300;
 }
+
+.btn-review{
+    display: flex;
+    gap: 50px;
+    font-size: 18pt;
+    color: var(--foreground);
+    opacity: .8;
+    padding-top: 50px;
+    .r{
+        display: flex;
+        gap: 20px;
+    }
+}

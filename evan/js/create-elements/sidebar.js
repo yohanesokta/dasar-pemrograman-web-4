@@ -50,7 +50,7 @@ export default function Sidebar() {
         ${sidebar_menus.trending
           .map(
             (d) =>
-              `<a href="" class="button button_ghost">
+              `<a href="${d.path}" class="button button_ghost">
               ${d.name}
             </a>`
           )

@@ -79,8 +79,8 @@ export const sidebar_menus = {
     },
   ],
   trending: [{
-    name : "All",
-    path : "",
+    name : "Trendings",
+    path: config["APP_URL "] + "/Rachelia/new_kategori/tranding",
     },{
       name : "Movie",
       path : ""
