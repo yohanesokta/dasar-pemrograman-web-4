@@ -76,8 +76,12 @@ export const sidebar_menus = {
   ],
   trending: [
     {
-      name: "Trendings",
-      path: config["APP_URL "] + "/Rachelia/new_kategori/tranding",
+      name: "Horor",
+      path: config["APP_URL "] + "/Rachelia/new_kategori/horor",
+    },
+    {
+      name: "Comedy",
+      path: config["APP_URL "] + "/Rachelia/new_kategori/comedy",
     },
     {
       name: "Movies",
@@ -98,19 +102,27 @@ export const sidebar_menus = {
       name : "Faq & Others",
       path: config["APP_URL "] + "/fitria/pages/faq film/",
     },
+  ], 
+  developer : [
     {
-      name: "Developers",
-      path: "",
+      name : "Yohanes Oktanio",
+      path: config["APP_URL "] + "/yohanes/profile/",
     },
     {
-      name: "HELLo",
-      path: "",
+      name : "Evan Raga Radya Alifian",
+      path: "https://dpw-homepage-evanalifian.vercel.app/",
     },
     {
-      name: "Developers",
-      path: "",
+      name : "Muhamad Jayro Fadil Mukolip",
+      path: "https://jayrofadil.github.io/website-portofolio",
     },
-  ],
+    {
+      name : "Fitria Cahaya kurnia",
+      path: "https://fitriacahayakurnia.github.io/blog-pribadi/",
+    },
+
+    // https://fitriacahayakurnia.github.io/blog-pribadi/
+  ]
 };
 
 export const footer_premium_menu = [

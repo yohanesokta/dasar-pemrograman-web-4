@@ -73,5 +73,22 @@ export default function Sidebar() {
       </div>
       </section>
   `;
-  sidebar.innerHTML = sidebar_you + movie_list + trending + discover + sidebar_others;
+
+  const developer = `
+    <section>
+      <h3>Developers</h3>
+      <div>
+        ${sidebar_menus.developer
+          .map(
+            (d) =>
+              `<a href="${d.path}" class="button button_ghost">
+              ${d.name}
+            </a>`
+          )
+          .join("")}
+      </div>
+      </section>
+  `;
+  
+  sidebar.innerHTML = sidebar_you + movie_list + trending + discover + sidebar_others + developer;
 }
