@@ -1,63 +1,63 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  background-color: #141414;
-  padding: 30px;
-  max-width: 900px;
-  margin: auto;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  color: #333;
 }
 
 h2 {
-  font-size: 26px;
-  margin-bottom: 25px;
-  border-left: 6px solid blueviolet;
-  padding-left: 12px;
-  color: whitesmoke;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
 }
 
 .cast-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .cast-item {
   display: flex;
-  align-items: center;
-  background-color: #222;
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cast-item:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .cast-photo {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
+  width: 100%;
+  height: 200px;
   background-color: #ddd;
   background-size: cover;
   background-position: center;
-  margin-right: 15px;
-  flex-shrink: 0;
 }
 
 .cast-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
 }
 
 .actor-name {
+  font-size: 18px;
   font-weight: bold;
-  font-size: 16px;
-  color: whitesmoke;
+  margin-bottom: 5px;
 }
 
 .character-name {
   font-size: 14px;
-  color: white;
+  color: #666;
 }

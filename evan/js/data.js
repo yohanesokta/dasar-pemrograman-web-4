@@ -120,6 +120,15 @@ export const sidebar_menus = {
       name : "Fitria Cahaya kurnia",
       path: "https://fitriacahayakurnia.github.io/blog-pribadi/",
     },
+    {
+      name : "Rachelia Andini Tendean",
+      path: "https://racheliaandinitendean.github.io/blog-pribadi/",
+    },
+
+    {
+      name : "Angga Pratama",
+      path: config["APP_URL "] + "/angga/pribadi/",
+    },
 
     // https://fitriacahayakurnia.github.io/blog-pribadi/
   ]
