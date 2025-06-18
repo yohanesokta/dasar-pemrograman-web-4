@@ -110,19 +110,22 @@ export const sidebar_menus = {
     },
     {
       name : "Evan Raga Radya Alifian",
-      path: "https://dpw-homepage-evanalifian.vercel.app/",
+      path: config["APP_URL "] + "/evan/pribadi/",
+
     },
     {
       name : "Muhamad Jayro Fadil Mukolip",
-      path: "https://jayrofadil.github.io/website-portofolio",
+            path: config["APP_URL "] + "/jayro/blog_pribadi/page",
     },
     {
       name : "Fitria Cahaya kurnia",
-      path: "https://fitriacahayakurnia.github.io/blog-pribadi/",
+      path: config["APP_URL "] + "/fitria/pribadi/",
+
     },
     {
       name : "Rachelia Andini Tendean",
-      path: "https://racheliaandinitendean.github.io/blog-pribadi/",
+      path: config["APP_URL "] + "/Rachelia/pribadi/",
+
     },
 
     {

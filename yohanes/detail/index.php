@@ -78,7 +78,7 @@
                   <div class="menu">
                       <button class="active">Overview</button>
                       <button><a href="../../angga/actor film?id=<?php echo $_GET['id']; ?>">Actor Film</a></button>
-                      <button><a href="../../angga/crew?id= <?php echo $_GET['id']; ?>">Crew Film</a></button>
+                      <button><a href="../../Rachelia/Pages/crew?id= <?php echo $_GET['id']; ?>">Crew Film</a></button>
                       <button id="btn-love" style="color: gray;"><i id="icn-love"  class="fa-solid fa-heart"></i></button>
                       <button id="btn-letter" style="color: gray;"><i id='icn-letter' class="fa-solid fa-clock-rotate-left" ></i> Watch Letter</button>
 
