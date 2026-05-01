@@ -3,7 +3,7 @@ import { config } from "../../../../../app_config.js";
 
 export default async function GenerateMovieSection(type, title) {
   const data = await fetchMovies(type)
-  const movies = data.results.slice(0, 4)
+  const movies = data.results.slice(0, 3)
   return `
     <section class="movie_posters_section">
       <h2>${title}</h2>
